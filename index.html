@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUPPY TOY PERÚ - Criadores de Caniche/Poodle</title>
+  <meta name="description" content="Criadores de Caniche/Poodle en Perú. Más de 10 años de experiencia. Cachorros con pedigree, vacunados y con garantía de salud.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* WhatsApp Float Button - Mario Style */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wa-float__aura {
+      position: absolute;
+      inset: -22px;
+      border-radius: 80px;
+      background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.28) 0%, rgba(192, 57, 43, 0.08) 50%, transparent 72%);
+      animation: aura-breathe 2.2s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes aura-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.35); opacity: 0; }
+    }
+    .wa-float__ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 60px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wa-float__ring--1 { border: 2px solid rgba(192, 57, 43, 0.35); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .wa-float__ring--2 { border: 1.5px solid rgba(192, 57, 43, 0.22); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.4s; }
+    .wa-float__ring--3 { border: 1px solid rgba(192, 57, 43, 0.10); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.8s; }
+    @keyframes ring-expand {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.65); opacity: 0; }
+    }
+    .wa-float__btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #c0392b 0%, #a83224 100%);
+      padding: 10px 28px 10px 10px;
+      border-radius: 60px;
+      z-index: 2;
+      overflow: hidden;
+      animation: heartbeat 1.8s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+    .wa-float:hover .wa-float__btn { filter: brightness(1.12); transform: scale(1.03); }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.07); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.04); }
+      56% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .wa-float__btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      animation: sheen-sweep 4.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes sheen-sweep { 0%, 100% { left: -100%; } 50% { left: 150%; } }
+    .wa-float__icon {
+      position: relative;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .wa-float__icon img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; position: relative; z-index: 1; }
+    .wa-float__icon-glow {
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: rgba(255, 204, 0, 0.4);
+      animation: icon-glow 2.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes icon-glow { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.4); opacity: 0; } }
+    .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
+    .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
+    .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
+    @media (max-width: 480px) {
+      .wa-float { bottom: 20px; right: 16px; }
+      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
+      .wa-float__icon { width: 40px; height: 40px; }
+      .wa-float__icon img { width: 48px; height: 48px; }
+      .wa-float__label { font-size: 10px; }
+      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
+    }
+    @media (max-width: 360px) {
+      .wa-float__text { display: none; }
+      .wa-float__btn { padding: 8px; border-radius: 50%; }
+      .wa-float__ring { border-radius: 50%; }
+      .wa-float__aura { border-radius: 50%; }
+    }
+    
+    /* Video card styles */
+    .video-card {
+      flex-basis: calc(33.333% - 17px);
+      min-width: 280px;
+      max-width: 450px;
+    }
+    
+    @media (max-width: 1024px) {
+      .video-card {
+        flex-basis: calc(50% - 13px);
+        min-width: 250px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .video-card {
+        flex-basis: 48%;
+        min-width: 45%;
+      }
+    }
+    
+    /* Product card hover */
+    .product-card {
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    /* Category card styles */
+    .category-card {
+      transition: all 0.3s ease;
+    }
+    .category-card:hover {
+      transform: scale(1.03);
+    }
+    
+    /* FAQ Accordion styles */
+    details {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary .chevron {
+      transform: rotate(180deg);
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    
+    /* ===== BARRA TICKER ULTRA ===== */
+    .ticker-bar {
+      position: relative;
+      width: 100%;
+      height: 52px;
+      background: #1a0a07;
+      overflow: hidden;
+      z-index: 40;
+      border-bottom: 1px solid rgba(192,57,43,0.3);
+    }
+    .ticker-bar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #e74c3c 20%, #f4a623 50%, #e74c3c 80%, transparent 100%);
+      animation: scanLine 4s ease-in-out infinite;
+      z-index: 20;
+    }
+    @keyframes scanLine {
+      0%, 100% { opacity: 0.4; transform: scaleX(0.5); }
+      50% { opacity: 1; transform: scaleX(1); }
+    }
+    .paw-field {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .paw {
+      position: absolute;
+      opacity: 0;
+      animation: pawFloat linear infinite;
+      font-size: 10px;
+      color: rgba(192,57,43,0.15);
+    }
+    @keyframes pawFloat {
+      0%   { transform: translateY(60px) rotate(0deg) scale(0.5); opacity: 0; }
+      15%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { transform: translateY(-20px) rotate(25deg) scale(1); opacity: 0; }
+    }
+    .ticker-track-wrapper {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 35%, transparent 45%, transparent 55%, black 65%, black 88%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 35%, transparent 45%, transparent 55%, black 65%, black 88%, transparent 100%);
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerScroll 15s linear infinite;
+      height: 100%;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    @keyframes tickerScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 36px;
+      height: 52px;
+      white-space: nowrap;
+      color: rgba(255,255,255,0.55);
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .ticker-item:hover { color: rgba(255,255,255,0.9); }
+    .ticker-item .ti-icon {
+      width: 18px; height: 18px;
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ticker-item .ti-icon svg { width: 12px; height: 12px; fill: currentColor; opacity: 0.7; }
+    .ticker-item .ti-icon.ic-ship  { background: rgba(52,152,219,0.15); color: #5dade2; }
+    .ticker-item .ti-icon.ic-heart { background: rgba(231,76,60,0.15);  color: #e74c3c; }
+    .ticker-item .ti-icon.ic-fam   { background: rgba(244,166,35,0.15); color: #f4a623; }
+    .ticker-item .ti-icon.ic-vet   { background: rgba(46,204,113,0.15); color: #2ecc71; }
+    .ticker-item .ti-icon.ic-star  { background: rgba(155,89,182,0.15); color: #9b59b6; }
+    .ticker-sep {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      padding: 0 4px;
+      user-select: none;
+    }
+    .ticker-sep span { width: 3px; height: 3px; border-radius: 50%; background: rgba(192,57,43,0.4); display: block; }
+    .ticker-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border-radius: 60px;
+      overflow: visible;
+      text-decoration: none;
+    }
+    .ticker-center::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 60px;
+      background: radial-gradient(ellipse, rgba(192,57,43,0.3) 0%, transparent 70%);
+      animation: centerGlow 3s ease-in-out infinite;
+      z-index: -1;
+    }
+    @keyframes centerGlow {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+    .cta-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(26,10,7,0.95);
+      border: 1px solid rgba(192,57,43,0.3);
+      border-right: none;
+      border-radius: 60px 0 0 60px;
+      padding: 8px 14px 8px 16px;
+      height: 40px;
+    }
+    .cta-dot-wrap { position: relative; width: 8px; height: 8px; }
+    .cta-dot { width: 8px; height: 8px; border-radius: 50%; background: #25D366; position: relative; z-index: 1; }
+    .cta-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: #25D366;
+      animation: dotPing 2s cubic-bezier(0,0,0.2,1) infinite;
+      z-index: 0;
+    }
+    @keyframes dotPing {
+      0%   { transform: scale(1); opacity: 0.5; }
+      75%, 100% { transform: scale(2.2); opacity: 0; }
+    }
+    .cta-online { font-size: 9px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .cta-number-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #C83B15;
+      padding: 8px 20px;
+      height: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-number-area::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -80%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      animation: sheen 5s ease-in-out infinite;
+    }
+    @keyframes sheen { 0%, 100% { left: -80%; } 50% { left: 120%; } }
+    .cta-number { font-family: 'Space Mono', monospace; font-size: 15px; font-weight: 700; color: white; letter-spacing: 1.5px; position: relative; z-index: 1; }
+    .cta-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #25D366;
+      border-radius: 0 60px 60px 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .cta-wa svg { width: 20px; height: 20px; fill: white; position: relative; z-index: 1; transition: transform 0.3s ease; }
+    .ticker-center:hover .cta-wa { width: 52px; background: #1ebe5a; }
+    .ticker-center:hover .cta-wa svg { transform: scale(1.15) rotate(-8deg); }
+    .ticker-center:hover .cta-number-area { background: #e04a20; }
+    .cta-tooltip {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: white;
+      color: #1a0a07;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .cta-tooltip::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px; height: 8px;
+      background: white;
+      rotate: 45deg;
+    }
+    .ticker-center:hover .cta-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
+    @media (max-width: 768px) {
+      .ticker-bar { height: 46px; }
+      .cta-status { display: none; }
+      .cta-number-area { border-radius: 60px 0 0 60px; padding: 6px 16px; }
+      .cta-number { font-size: 13px; letter-spacing: 1px; }
+      .cta-wa { width: 36px; height: 36px; }
+      .cta-wa svg { width: 17px; height: 17px; }
+      .ticker-item { font-size: 11px; padding: 0 20px; }
+      .ticker-center::before { display: none; }
+      .cta-tooltip { display: none; }
+    }
+    @media (max-width: 420px) {
+      .cta-number { font-size: 11.5px; letter-spacing: 0.5px; }
+      .cta-number-area { padding: 6px 12px; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white">
+  
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Top Contact Bar -->
+    <div class="w-full py-2 px-4 bg-primary">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
+        <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
+        <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="filter: brightness(0) invert(1);">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          +51 920 688 338
+        </a>
+      </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
+      <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/" class="px-6 py-2 rounded-full text-sm font-medium text-white border-2 border-primary bg-primary">Inicio</a>
+          <a href="/cachorros.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Cachorros</a>
+          <a href="/familias.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Familias</a>
+          <a href="/informacion.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Información</a>
+          <a href="/visitanos.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Visítanos</a>
+        </div>
+        
+        <!-- Cart -->
+        <div class="hidden lg:flex items-center">
+          <a href="/cachorros.html" class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Barra Ticker Ultra -->
+  <div class="ticker-bar" id="tickerBar" style="margin-top: 112px;">
+    <div class="paw-field" id="pawField"></div>
+    <div class="ticker-track-wrapper">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ti-icon ic-ship"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></span>Envío seguro a todo el Perú</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>Garantía de salud certificada</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-fam"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>+500 familias felices</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-vet"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></span>Asesoría veterinaria 24/7</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-star"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>Criadores profesionales certificados</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-ship"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></span>Envío seguro a todo el Perú</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>Garantía de salud certificada</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-fam"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>+500 familias felices</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-vet"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></span>Asesoría veterinaria 24/7</span>
+        <span class="ticker-sep"><span></span></span>
+        <span class="ticker-item"><span class="ti-icon ic-star"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>Criadores profesionales certificados</span>
+        <span class="ticker-sep"><span></span></span>
+      </div>
+    </div>
+    <a class="ticker-center" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer">
+      <div class="cta-status"><div class="cta-dot-wrap"><div class="cta-dot"></div></div><span class="cta-online">En línea</span></div>
+      <div class="cta-number-area"><span class="cta-number">+51 920 688 338</span></div>
+      <div class="cta-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.625-1.476A11.929 11.929 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.198 0-4.247-.588-6.02-1.614l-.432-.256-2.742.876.87-2.675-.28-.446A9.706 9.706 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg></div>
+      <div class="cta-tooltip">¡Escríbenos ahora por WhatsApp!</div>
+    </a>
+  </div>
+  
+  <!-- Spacer for fixed header -->
+  <div class="h-0"></div>
+  
+  <!-- Hero Section with Video -->
+  <section class="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="https://puppytoyperu.com/wp-content/uploads/2025/11/videoiniciopuppytoyperu-1-1-1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black/10"></div>
+  </section>
+  
+  <!-- Bienvenido Section -->
+  <section class="w-full py-12 md:py-16 lg:py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 uppercase">
+        Bienvenido a la familia de <span class="text-primary">PUPPY TOY PERÚ</span>
+      </h1>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="text-gray-600 text-lg leading-relaxed text-justify">
+          <p class="mb-6">Somos criadores desde hace más de 10 años dedicados a la conservación de la raza Caniche o conocido como Poodle, esta pasión hacia los animales nos ha llevado a buscar los mejores estándar de dicho ejemplar encontrándolos en criaderos extranjeros, mayormente los traslados de los cachorros son de países vecinos como, Bolivia, Argentina y Brasil, de este modo el tiempo de llegada estimada es de aproximadamente 2 semanas, tambien disponemos de cachorros nacionales para entrega inmediata.</p>
+          <p>En Puppy toy Perú velamos por la salud, crianza y genética de cada ejemplar es por ello que te brindamos nuestro compromiso atreves de nuestro certificado de importación y garantía donde comprobaras la pureza de tu compañero de vida.</p>
+        </div>
+        
+        <div class="rounded-lg overflow-hidden min-h-[300px]">
+          <iframe src="https://player.vimeo.com/video/1145848703?muted=1&autoplay=1&loop=1&background=1" 
+                  class="w-full h-full min-h-[300px] border-0" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Categorías Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase">ELIGE A TU CACHORRO</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Mini Toy -->
+        <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/1-1300x588.webp" 
+                 alt="Mini Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="text-center py-4">
+            <h3 class="text-xl font-semibold text-gray-800 uppercase">MINI TOY</h3>
+          </div>
+        </a>
+        
+        <!-- Toy -->
+        <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/2-1300x599.webp" 
+                 alt="Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="text-center py-4">
+            <h3 class="text-xl font-semibold text-gray-800 uppercase">TOY</h3>
+          </div>
+        </a>
+        
+        <!-- Enano -->
+        <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/3-1300x571.webp" 
+                 alt="Enano" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="text-center py-4">
+            <h3 class="text-xl font-semibold text-gray-800 uppercase">ENANO</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Productos Section -->
+  <section class="w-full py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase">CACHORROS</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Producto 1 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-toy-negro-new.png" 
+                 alt="Poodle Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY NEGRO</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">S/2,500.00</p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+        
+        <!-- Producto 2 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-mini-toy-negro-new.png" 
+                 alt="Poodle Mini Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE MINI TOY NEGRO</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">MINI TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">S/3,500.00</p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+        
+        <!-- Producto 3 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-toy-beige-new.png" 
+                 alt="Poodle Toy Beige" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY BEIGE</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">S/2,500.00</p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+        
+        <!-- Producto 4 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-mini-toy-rojo-new.png" 
+                 alt="Poodle Mini Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE MINI TOY ROJO</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">MINI TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">S/4,900.00</p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+        
+        <!-- Producto 5 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-toy-marron-chocolate-new.png" 
+                 alt="Poodle Toy Marron Chocolate" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY MARRON CHOCOLATE</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">S/4,000.00</p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+        
+        <!-- Producto 6 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg relative">
+          <span class="absolute top-2 left-2 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-lg z-10">-10%</span>
+          <a href="/cachorros.html" class="block overflow-hidden">
+            <img src="images/poodle-toy-rojo-new.png" 
+                 alt="Poodle Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="text-center p-4">
+            <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY ROJO</h3>
+            <a href="/cachorros.html" class="text-gray-500 text-sm">TOY</a>
+            <p class="text-primary text-lg font-bold mt-2">
+              <del class="text-gray-400 mr-2">S/5,000.00</del>S/4,500.00
+            </p>
+            <a href="/cachorros.html" class="inline-block mt-3 px-4 py-2 bg-orange-50 text-gray-700 text-sm rounded-lg hover:bg-orange-100 transition-colors">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="/cachorros.html" class="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors">Más cachorros</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Cachorros en el Extranjero Section -->
+  <section class="w-full py-16 md:py-20 px-4 relative overflow-hidden" style="background: linear-gradient(135deg, #C83B15 0%, #a03010 100%);">
+    <!-- Star pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="text-white">
+          <h2 class="text-2xl md:text-3xl font-bold uppercase mb-6">Nuestros cachorros en el extranjero</h2>
+          <p class="text-lg leading-relaxed">Cada cachorro cuenta con un microchip de identificación en el cual nuestro personal brinda el video de comprobación en el país de origen del cachorro a Perú para que su nueva familia verifique su autenticidad junto a sus documento de importación.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden min-h-[300px]">
+          <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
+                  class="w-full h-full min-h-[300px] border-0" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Video Carousel Section -->
+  <section class="w-full bg-[#F8F8F8] border-b-4 border-black py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-center uppercase mb-10">CANICHES EN SU NUEVO HOGAR</h2>
+      
+      <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4" id="video-carousel">
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158025494?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158016638?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158016631?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <iframe src="https://player.vimeo.com/video/1158016624?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-center gap-2 mt-6">
+        <button class="w-3 h-3 rounded-full bg-primary"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certificados Section -->
+  <section class="w-full py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase">CERTIFICADO DE CACHORROS Y GARANTIA</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Test Canino -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 2v2"></path>
+              <path d="M5 2v2"></path>
+              <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"></path>
+              <path d="M8 15a6 6 0 0 0 12 0v-3"></path>
+              <circle cx="20" cy="10" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">TEST CANINO</h3>
+          <p class="text-gray-600">El Test de parvovirus y distemper canino se realiza para detectar posibles enfermedades infectocontagiosas o parásitos, asegurando que los cachorros están sanos antes de ser entregados.</p>
+        </div>
+        
+        <!-- Pedigree -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+              <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+              <path d="M10 9H8"></path>
+              <path d="M16 13H8"></path>
+              <path d="M16 17H8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">PEDIGREE</h3>
+          <p class="text-gray-600">Es un documento oficial que certifica la ascendencia de un perro a través de un identificador de microchip, y el AEKC es el club canino que lo otorga a la raza.</p>
+          <p class="text-gray-400 text-sm mt-2">(COSTO ADICIONAL)</p>
+        </div>
+        
+        <!-- Microchip -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20v2"></path>
+              <path d="M12 2v2"></path>
+              <path d="M17 20v2"></path>
+              <path d="M17 2v2"></path>
+              <path d="M2 12h2"></path>
+              <path d="M2 17h2"></path>
+              <path d="M2 7h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="M20 17h2"></path>
+              <path d="M20 7h2"></path>
+              <path d="M7 20v2"></path>
+              <path d="M7 2v2"></path>
+              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+              <rect x="8" y="8" width="8" height="8" rx="1"></rect>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">MICROCHIP</h3>
+          <p class="text-gray-600">Es un dispositivo que se implanta en los cachorros desde su país de origen para identificarles de manera única, facilitando su recuperación en caso de pérdida y verificando su propiedad.</p>
+          <p class="text-gray-400 text-sm mt-2">(COSTO ADICIONAL)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TikTok Section -->
+  <section class="w-full py-16 md:py-20 px-4 bg-black">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-white text-lg mb-4">Síguenos en</p>
+      <h2 class="text-white text-5xl font-bold mb-8">TikTok</h2>
+      <a href="https://www.tiktok.com/@puppytoyperu" target="_blank" 
+         class="inline-flex items-center gap-2 bg-[#25F4EE] text-black font-bold text-xl px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
+        <svg height="32" viewBox="0 0 24 24" fill="black">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+        </svg>
+        @puppytoyperu
+      </a>
+      <p class="text-gray-400 mt-6">✨ Bienvenidos a Puppy Toy, aquí conocerás a tu caniche ideal</p>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-primary font-semibold mb-2">PUPPY TOY PERÚ</p>
+        <h2 class="text-2xl md:text-3xl font-bold uppercase">Preguntas Frecuentes</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>¿Cómo Adquiero a mi cachorro?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Puedes contactarnos directamente por WhatsApp al +51 920 688 338 o visitar nuestra página de cachorros. Te brindaremos toda la información sobre disponibilidad, precios y el proceso de adopción.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>¿Realizan envíos nacionales?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Sí, realizamos envíos a todo el Perú mediante empresas de transporte confiables que garantizan la seguridad y bienestar de tu cachorro durante el traslado.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Compromiso: Garantía y Trasparencia</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Todos nuestros cachorros cuentan con garantía de salud, certificado de vacunación y la opción de pedigree. Brindamos videos de comprobación desde el país de origen hasta la entrega en Perú.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Traslado del cachorro a Perú</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Los cachorros importados vienen de países vecinos como Bolivia, Argentina y Brasil. El tiempo estimado de llegada es de aproximadamente 2 semanas. También contamos con cachorros nacionales para entrega inmediata.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Estafas comunes</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Desconfía de precios muy bajos, vendedores que no permiten videollamadas, o que piden pagos completos por adelantado sin garantías. Nosotros siempre brindamos videos en vivo y documentación verificable.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Nombre de empresa</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Somos Puppy Toy Perú, criadores especializados en Caniche/Poodle con más de 10 años de experiencia. Nuestra oficina está ubicada en Los Olivos, Lima.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Alergia - Hipoalergénico</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Los Caniche/Poodle son considerados hipoalergénicos porque no sueltan tanto pelo como otras razas. Son ideales para personas con alergias leves a perros.
+          </div>
+        </details>
+        
+        <details class="bg-white rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
+            <span>Características de un Caniche</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+          </summary>
+          <div class="px-4 pb-4 text-gray-600">
+            Los Caniche son inteligentes, leales, juguetones y fáciles de entrenar. Son excelentes compañeros familiares y se adaptan bien a la vida en apartamentos.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="w-full py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+              <path d="M15 18H9"></path>
+              <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+              <circle cx="17" cy="18" r="2"></circle>
+              <circle cx="7" cy="18" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Entrega a Domicilio</h3>
+          <p class="text-gray-600 text-sm">Recibe a tu caniche en la puerta de tu hogar, con total seguridad y cariño.</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 7v14"></path>
+              <path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
+              <path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path>
+              <rect x="3" y="7" width="18" height="4" rx="1"></rect>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Regalo Especial</h3>
+          <p class="text-gray-600 text-sm">Sorprende a quien más quieres con un tierno caniche lleno de amor.</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+              <circle cx="12" cy="8" r="6"></circle>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Cachorros de Calidad</h3>
+          <p class="text-gray-600 text-sm">Caniches con pedigree, vacunados y criados en ambiente familiar</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Compra con Confianza</h3>
+          <p class="text-gray-600 text-sm">Atención personalizada y asesoría antes y después de la compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-gray-100 pt-12 pb-6 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+             alt="Puppy Toy Perú" class="h-16 mx-auto">
+      </div>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-8 text-gray-600">
+        <a href="/visitanos.html" class="hover:text-primary transition-colors">Visítanos</a>
+        <a href="/familias.html" class="hover:text-primary transition-colors">Familia</a>
+        <a href="/informacion.html" class="hover:text-primary transition-colors">Información</a>
+        <a href="/cachorros.html" class="hover:text-primary transition-colors">Mini Toy</a>
+        <a href="/cachorros.html" class="hover:text-primary transition-colors">Toy</a>
+        <a href="/cachorros.html" class="hover:text-primary transition-colors">Enano</a>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="flex flex-wrap justify-center gap-8 mb-8 text-gray-600">
+        <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          </svg>
+          contacto@puppytoy.com
+        </a>
+        <a href="tel:+51920688338" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+          </svg>
+          +51 920 688 338
+        </a>
+        <a href="https://instagram.com/puppytoyperu" target="_blank" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @puppytoyperu
+        </a>
+      </div>
+      
+      <!-- Location -->
+      <div class="text-center mb-8 text-gray-600">
+        <p class="flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          LIMA, PERÚ - Oficina Presencial – Los Olivos
+        </p>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-300 pt-6 text-center text-sm text-gray-500">
+        <p>Copyright 2025 - Uso exclusivo y todos los derechos reservados legalmente Puppy Toy Perú</p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-4 underline hover:text-primary transition-colors">Regresar arriba</button>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Float Button - Mario Style -->
+  <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="wa-float__aura"></span>
+    <span class="wa-float__ring wa-float__ring--1"></span>
+    <span class="wa-float__ring wa-float__ring--2"></span>
+    <span class="wa-float__ring wa-float__ring--3"></span>
+    <span class="wa-float__btn">
+      <span class="wa-float__icon">
+        <span class="wa-float__icon-glow"></span>
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;">
+      </span>
+      <span class="wa-float__text">
+        <span class="wa-float__label">WhatsApp directo</span>
+        <span class="wa-float__number">+51 920 688 338</span>
+      </span>
+    </span>
+  </a>
+  
+  <!-- Mobile Menu Sidebar -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50" onclick="closeMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="mobile-menu-panel">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h3 class="text-xl font-bold">Menú</h3>
+          <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="space-y-4">
+          <a href="/" class="block py-3 px-4 rounded-lg bg-primary text-white font-medium">Inicio</a>
+          <a href="/cachorros.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Cachorros</a>
+          <a href="/familias.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Familias</a>
+          <a href="/informacion.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Información</a>
+          <a href="/visitanos.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Visítanos</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenuPanel.classList.remove('translate-x-full');
+      }, 10);
+    });
+    
+    function closeMobileMenu() {
+      mobileMenuPanel.classList.add('translate-x-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+    }
+    
+    // Auto-redirect to WhatsApp on first visit
+    (function() {
+      const hasVisited = sessionStorage.getItem('whatsappRedirect');
+      if (!hasVisited) {
+        sessionStorage.setItem('whatsappRedirect', 'true');
+        setTimeout(() => {
+          window.open('https://wa.me/51920688338', '_blank');
+        }, 3000);
+      }
+    })();
+    
+    // === Generar huellitas flotantes ===
+    const pawField = document.getElementById('pawField');
+    const pawSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="8" cy="7" rx="2.2" ry="2.8"/><ellipse cx="16" cy="7" rx="2.2" ry="2.8"/><ellipse cx="5" cy="13" rx="2" ry="2.5"/><ellipse cx="19" cy="13" rx="2" ry="2.5"/><ellipse cx="12" cy="17" rx="4" ry="3.5"/></svg>`;
+    function spawnPaw() {
+      const paw = document.createElement('span');
+      paw.className = 'paw';
+      paw.innerHTML = pawSVG;
+      paw.style.left = Math.random() * 100 + '%';
+      paw.style.animationDuration = (3 + Math.random() * 4) + 's';
+      paw.style.animationDelay = Math.random() * 0.5 + 's';
+      paw.style.fontSize = (8 + Math.random() * 6) + 'px';
+      pawField.appendChild(paw);
+      setTimeout(() => paw.remove(), 8000);
+    }
+    setInterval(spawnPaw, 900);
+    for (let i = 0; i < 6; i++) setTimeout(spawnPaw, i * 300);
+  </script>
+</body>
+</html>

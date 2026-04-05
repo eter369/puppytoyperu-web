@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información - Puppy Toy Perú</title>
+  <meta name="description" content="Información sobre certificados SENASA, microchip y trámites de exportación para nuestros cachorros Caniche/Poodle.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    
+    /* WhatsApp Float Button - Mario Style */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wa-float__aura {
+      position: absolute;
+      inset: -22px;
+      border-radius: 80px;
+      background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.28) 0%, rgba(192, 57, 43, 0.08) 50%, transparent 72%);
+      animation: aura-breathe 2.2s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes aura-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.35); opacity: 0; }
+    }
+    .wa-float__ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 60px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wa-float__ring--1 { border: 2px solid rgba(192, 57, 43, 0.35); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .wa-float__ring--2 { border: 1.5px solid rgba(192, 57, 43, 0.22); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.4s; }
+    .wa-float__ring--3 { border: 1px solid rgba(192, 57, 43, 0.10); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.8s; }
+    @keyframes ring-expand {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.65); opacity: 0; }
+    }
+    .wa-float__btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #c0392b 0%, #a83224 100%);
+      padding: 10px 28px 10px 10px;
+      border-radius: 60px;
+      z-index: 2;
+      overflow: hidden;
+      animation: heartbeat 1.8s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+    .wa-float:hover .wa-float__btn { filter: brightness(1.12); transform: scale(1.03); }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.07); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.04); }
+      56% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .wa-float__btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      animation: sheen-sweep 4.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes sheen-sweep { 0%, 100% { left: -100%; } 50% { left: 150%; } }
+    .wa-float__icon {
+      position: relative;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .wa-float__icon img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; position: relative; z-index: 1; }
+    .wa-float__icon-glow {
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: rgba(255, 204, 0, 0.4);
+      animation: icon-glow 2.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes icon-glow { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.4); opacity: 0; } }
+    .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
+    .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
+    .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
+    @media (max-width: 480px) {
+      .wa-float { bottom: 20px; right: 16px; }
+      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
+      .wa-float__icon { width: 40px; height: 40px; }
+      .wa-float__icon img { width: 48px; height: 48px; }
+      .wa-float__label { font-size: 10px; }
+      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
+    }
+    @media (max-width: 360px) {
+      .wa-float__text { display: none; }
+      .wa-float__btn { padding: 8px; border-radius: 50%; }
+      .wa-float__ring { border-radius: 50%; }
+      .wa-float__aura { border-radius: 50%; }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="w-full py-2 px-4 bg-primary">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
+        <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
+        <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          +51 920 688 338
+        </a>
+      </div>
+    </div>
+    
+    <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
+      <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <a href="/" class="flex-shrink-0">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+        </a>
+        
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Inicio</a>
+          <a href="/cachorros.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Cachorros</a>
+          <a href="/familias.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Familias</a>
+          <a href="/informacion.html" class="px-6 py-2 rounded-full text-sm font-medium text-white border-2 border-primary bg-primary">Información</a>
+          <a href="/visitanos.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Visítanos</a>
+        </div>
+        
+        <div class="hidden lg:flex items-center">
+          <button class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+          </button>
+        </div>
+        
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="h-28"></div>
+  
+  <!-- Breadcrumb -->
+  <div class="w-full bg-gray-50 py-4 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="/" class="hover:text-primary">Inicio</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-primary font-medium">Información</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="w-full bg-primary py-16 md:py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-3xl md:text-5xl font-bold uppercase text-white mb-4">Información</h1>
+      <p class="text-xl text-white/90">Todo lo que necesitas saber sobre nuestros cachorros y trámites</p>
+    </div>
+  </section>
+  
+  <!-- International Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Nuestros cachorros en otros paises</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            En Puppy Toy Perú nos especializamos en la importación y exportación de cachorros Caniche/Poodle de la más alta calidad. Trabajamos con criaderos certificados en Bolivia, Argentina y Brasil para traerte los mejores ejemplares.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Todos nuestros cachorros cuentan con documentación completa y están preparados para viajar a cualquier parte del mundo. Nos encargamos de todos los trámites necesarios para que tu experiencia sea lo más sencilla posible.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="flex items-center gap-2 text-primary font-semibold">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Documentación completa</span>
+            </div>
+            <div class="flex items-center gap-2 text-primary font-semibold">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Envíos internacionales</span>
+            </div>
+            <div class="flex items-center gap-2 text-primary font-semibold">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Garantía de salud</span>
+            </div>
+          </div>
+        </div>
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
+                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="International Puppies"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certificates Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Certificados y Documentación</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- SENASA Certificate -->
+        <div class="bg-white rounded-xl p-8 shadow hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="file-check" class="w-8 h-8 text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold uppercase text-gray-800 mb-2">CERTIFICADO SANITARIO DE EXPORTACIÓN ANIMAL (SENASA)</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            Este certificado, emitido por el Servicio Nacional de Sanidad Agraria del Perú (SENASA) es un requisito indispensable para trasladar a tu mascota fuera de nuestro país. Tu mascota pasará por una inspección veterinaria tanto física como documentaria por la autoridad encargada. Nosotros podemos encargarnos de realizar toda esta gestión por ti, así como también podemos asesorarte para evitar cualquier tipo de inconveniente ó retraso durante el proceso.
+          </p>
+        </div>
+        
+        <!-- Microchip -->
+        <div class="bg-white rounded-xl p-8 shadow hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="cpu" class="w-8 h-8 text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold uppercase text-gray-800 mb-2">MICROCHIP PARA PERROS</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            El microchip es un dispositivo de identificación electrónico del tamaño de un grano de arroz que se implanta bajo la piel de tu mascota. Cada microchip tiene un número único que permite identificar a tu perro de manera permanente. Este es un requisito obligatorio para viajes internacionales y es fundamental para la seguridad de tu mascota. Todos nuestros cachorros vienen con microchip internacional activado y registrado.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Process Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Proceso de Adopción</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-lg font-bold uppercase mb-2">Contacto</h3>
+          <p class="text-gray-600 text-sm">Escríbenos por WhatsApp o visita nuestras instalaciones para conocer los cachorros disponibles.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-lg font-bold uppercase mb-2">Reserva</h3>
+          <p class="text-gray-600 text-sm">Realiza una reserva de S/200 para asegurar tu cachorro. Te enviaremos fotos y videos actualizados.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-lg font-bold uppercase mb-2">Documentación</h3>
+          <p class="text-gray-600 text-sm">Preparamos toda la documentación necesaria: certificado veterinario, microchip y pasaporte.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4">4</div>
+          <h3 class="text-lg font-bold uppercase mb-2">Entrega</h3>
+          <p class="text-gray-600 text-sm">Coordinamos la entrega en nuestras instalaciones o el envío a tu domicilio/ubicación.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Preguntas Frecuentes</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Cuánto tiempo tarda en llegar un cachorro importado?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            El tiempo de llegada estimado es de aproximadamente 2 semanas desde países vecinos como Bolivia, Argentina y Brasil. También disponemos de cachorros nacionales para entrega inmediata.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Qué documentación incluye el cachorro?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Todos nuestros cachorros vienen con certificado veterinario, cartilla de vacunación, microchip internacional, y certificado de pureza de la raza. Para exportación, también incluimos el certificado SENASA.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Realizan envíos a otros países?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Sí, realizamos envíos internacionales. Nos encargamos de toda la documentación y logística necesaria para que tu cachorro llegue seguro a su destino.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Qué garantía ofrecen?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Ofrecemos garantía de salud por 15 días contra enfermedades infectocontagiosas. Además, garantizamos la pureza de la raza y proporcionamos todos los documentos oficiales.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="w-full bg-primary py-16 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase text-white mb-4">¿Tienes más preguntas?</h2>
+      <p class="text-xl text-white/90 mb-8">Contáctanos y te ayudaremos con todo lo que necesites saber</p>
+      <a href="/visitanos.html" class="inline-block px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all">
+        Contactar ahora
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain">
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visítanos</a>
+        <a href="/familias.html" class="text-gray-600 hover:text-primary transition-colors">Familia</a>
+        <a href="/informacion.html" class="text-gray-600 hover:text-primary transition-colors">Información</a>
+        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visitanos</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Mini Toy</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Toy</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Enano</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
+        <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          contacto@puppytoy.com
+        </a>
+        <a href="tel:+51920688338" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          +51 920 688 338
+        </a>
+        <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          @puppytoyperu
+        </a>
+      </div>
+      <div class="text-center mb-6">
+        <p class="text-gray-600 flex items-center justify-center gap-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+          LIMA, PERÚ - Oficina Presencial – Los Olivos
+        </p>
+      </div>
+      <div class="border-t border-gray-200 pt-6 text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2025 - Uso exclusivo y todos los derechos reservados legalmente Puppy Toy Perú
+        </p>
+      </div>
+      <div class="text-center mt-4">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-500 hover:text-primary transition-colors text-sm">
+          Regresar arriba
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    lucide.createIcons();
+    
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('[data-lucide="chevron-down"]');
+        
+        document.querySelectorAll('.faq-content').forEach(c => {
+          if (c !== content) c.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-toggle svg').forEach(i => {
+          if (i !== icon) i.style.transform = 'rotate(0deg)';
+        });
+        
+        content.classList.toggle('hidden');
+        icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    });
+  </script>
+  <!-- WhatsApp Float Button - Mario Style -->
+  <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="wa-float__aura"></span>
+    <span class="wa-float__ring wa-float__ring--1"></span>
+    <span class="wa-float__ring wa-float__ring--2"></span>
+    <span class="wa-float__ring wa-float__ring--3"></span>
+    <span class="wa-float__btn">
+      <span class="wa-float__icon">
+        <span class="wa-float__icon-glow"></span>
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'">
+      </span>
+      <span class="wa-float__text">
+        <span class="wa-float__label">WhatsApp directo</span>
+        <span class="wa-float__number">+51 920 688 338</span>
+      </span>
+    </span>
+  </a>
+
+</body>
+</html>

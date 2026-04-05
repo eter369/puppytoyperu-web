@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puppy Toy Perú - Criadores de Caniches Poodle</title>
+  <meta name="description" content="Puppy Toy Perú - Criadores de Caniches Poodle con más de 10 años de experiencia. Cachorros importados con garantía y certificado de pureza.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-white">
+  
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Top Contact Bar -->
+    <div class="w-full py-2 px-4 bg-primary">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
+        <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
+        <a href="tel:+51960724528" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          +51 960 724 528
+        </a>
+      </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
+      <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/" class="px-6 py-2 rounded-full text-sm font-medium text-white border-2 border-primary bg-primary">Inicio</a>
+          <a href="/cachorros" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Cachorros</a>
+          <a href="/familias" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Familias</a>
+          <a href="/informacion" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Información</a>
+          <a href="/visitanos" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Visítanos</a>
+        </div>
+        
+        <!-- Cart -->
+        <div class="hidden lg:flex items-center">
+          <button class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+          </button>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+  
+  <!-- Hero Video Section -->
+  <section class="w-full h-[500px] md:h-[600px] lg:h-[700px] relative overflow-hidden">
+    <video class="absolute inset-0 w-full h-full object-cover" 
+           src="https://puppytoyperu.com/wp-content/uploads/2025/11/videoiniciopuppytoyperu-1-1-1.mp4" 
+           autoplay loop muted playsInline></video>
+    <div class="absolute inset-0 bg-black/10"></div>
+  </section>
+  
+  <!-- Welcome Section -->
+  <section class="w-full bg-white py-12 md:py-16 lg:py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-center mb-8 md:mb-12">
+        Bienvenido a la familia de <span class="text-primary">PUPPY TOY PERÚ</span>
+      </h1>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div class="space-y-6">
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            Somos criadores desde hace más de 10 años dedicados a la conservación de la raza Caniche o conocido como Poodle, esta pasión hacia los animales nos ha llevado a buscar los mejores estándar de dicho ejemplar encontrándolos en criaderos extranjeros, mayormente los traslados de los cachorros son de países vecinos como, Bolivia, Argentina y Brasil, de este modo el tiempo de llegada estimada es de aproximadamente 2 semanas, tambien disponemos de cachorros nacionales para entrega inmediata.
+          </p>
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            En Puppy toy Perú velamos por la salud, crianza y genética de cada ejemplar es por ello que te brindamos nuestro compromiso atreves de nuestro certificado de importación y garantía donde comprobaras la pureza de tu compañero de vida.
+          </p>
+        </div>
+        
+        <div class="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+          <iframe src="https://player.vimeo.com/video/1145848703?muted=1&autoplay=1&loop=1&background=1" 
+                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="Puppy Toy Video"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Categories Section -->
+  <section class="w-full bg-[#F7F7F7] py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">ELIGE A TU CACHORRO</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Mini Toy -->
+        <a href="/categoria-producto/mini-toy/" class="group block bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/1-1300x588.webp" 
+                 alt="Mini Toy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-semibold uppercase text-gray-800 group-hover:text-primary transition-colors">MINI TOY</h3>
+          </div>
+        </a>
+        
+        <!-- Toy -->
+        <a href="/categoria-producto/toy/" class="group block bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/2-1300x599.webp" 
+                 alt="Toy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-semibold uppercase text-gray-800 group-hover:text-primary transition-colors">TOY</h3>
+          </div>
+        </a>
+        
+        <!-- Enano -->
+        <a href="/categoria-producto/enano/" class="group block bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
+          <div class="overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/3-1300x571.webp" 
+                 alt="Enano" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-semibold uppercase text-gray-800 group-hover:text-primary transition-colors">ENANO</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products Section -->
+  <section class="w-full bg-white py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">CACHORROS</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
+          <a href="/producto/poodle-toy-negroo/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-15_11_11zon-800x800.webp" 
+                 alt="Poodle Toy Negro" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-toy-negroo/">POODLE TOY NEGRO</a></h3>
+            <a href="/categoria-producto/toy/" class="text-sm text-gray-500 hover:text-primary">TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">S/2,500.00</p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
+          <a href="/producto/poodle-mini-toy-negro/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-1_4_11zon-800x800.webp" 
+                 alt="Poodle Mini Toy Negro" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-mini-toy-negro/">POODLE MINI TOY NEGRO</a></h3>
+            <a href="/categoria-producto/mini-toy/" class="text-sm text-gray-500 hover:text-primary">MINI TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">S/3,500.00</p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
+          <a href="/producto/poodle-toy-beige/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-11_5_11zon-800x800.webp" 
+                 alt="Poodle Toy Beige" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-toy-beige/">POODLE TOY BEIGE</a></h3>
+            <a href="/categoria-producto/toy/" class="text-sm text-gray-500 hover:text-primary">TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">S/2,500.00</p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
+          <a href="/producto/poodle-mini-toy-rojo/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-5_8_11zon-800x800.webp" 
+                 alt="Poodle Mini Toy Rojo" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-mini-toy-rojo/">POODLE MINI TOY ROJO</a></h3>
+            <a href="/categoria-producto/mini-toy/" class="text-sm text-gray-500 hover:text-primary">MINI TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">S/4,900.00</p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
+          <a href="/producto/poodle-toy-marron-chocolate/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-14_3_11zon-800x800.webp" 
+                 alt="Poodle Toy Marron Chocolate" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-toy-marron-chocolate/">POODLE TOY MARRON CHOCOLATE</a></h3>
+            <a href="/categoria-producto/toy/" class="text-sm text-gray-500 hover:text-primary">TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">S/4,000.00</p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 6 (Sale) -->
+        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group relative">
+          <span class="absolute top-2 left-2 bg-[#16A1CC] text-white text-xs font-bold px-3 py-1 rounded-lg z-10">-10%</span>
+          <a href="/producto/poodle-toy-rojo/" class="block overflow-hidden">
+            <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/puppy-wb_11zon-800x800.webp" 
+                 alt="Poodle Toy Rojo" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-gray-800 mb-2"><a href="/producto/poodle-toy-rojo/">POODLE TOY ROJO</a></h3>
+            <a href="/categoria-producto/toy/" class="text-sm text-gray-500 hover:text-primary">TOY</a>
+            <p class="text-primary font-bold text-lg mt-2">
+              <del class="text-gray-400 text-base mr-2">S/5,000.00</del>
+              S/4,500.00
+            </p>
+            <button class="mt-3 px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="/cachorros.html" class="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all">
+          Más cachorros
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- International Puppies Section -->
+  <section class="w-full bg-primary py-16 md:py-20 px-4 relative overflow-hidden">
+    <!-- Star pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="text-white">
+          <h2 class="text-2xl md:text-3xl font-bold uppercase mb-6">Nuestros cachorros en el extranjero</h2>
+          <p class="text-lg leading-relaxed">
+            Cada cachorro cuenta con un microchip de identificación en el cual nuestro personal brinda el video de comprobación en el país de origen del cachorro a Perú para que su nueva familia verifique su autenticidad junto a sus documento de importación.
+          </p>
+        </div>
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
+                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="International Puppies"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Videos Carousel Section -->
+  <section class="w-full bg-[#F8F8F8] py-12 md:py-16 px-4 border-b-4 border-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold uppercase text-center mb-10">CANICHES EN SU NUEVO HOGAR</h2>
+      
+      <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4" id="video-carousel">
+        <!-- Video Cards -->
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158025494?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 1"></iframe>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 2"></iframe>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 3"></iframe>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158025494?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 4"></iframe>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 5"></iframe>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
+          <div class="relative pt-[177.78%]">
+            <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
+                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 6"></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Dots -->
+      <div class="flex justify-center gap-2 mt-6">
+        <button class="w-3 h-3 rounded-full bg-primary"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30 hover:bg-primary/50 transition-all"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30 hover:bg-primary/50 transition-all"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30 hover:bg-primary/50 transition-all"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30 hover:bg-primary/50 transition-all"></button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certificates Section -->
+  <section class="w-full bg-white py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">CERTIFICADO DE CACHORROS Y GARANTIA</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Test Canino -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="stethoscope" class="w-16 h-16 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">TEST CANINO</h3>
+          <p class="text-gray-600 leading-relaxed">
+            El Test de parvovirus y distemper canino se realiza para detectar posibles enfermedades infectocontagiosas o parásitos, asegurando que los cachorros están sanos antes de ser entregados.
+          </p>
+        </div>
+        
+        <!-- Pedigree -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="file-text" class="w-16 h-16 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">PEDIGREE</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Es un documento oficial que certifica la ascendencia de un perro a través de un identificador de microchip, y el AEKC es el club canino que lo otorga a la raza.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">(COSTO ADICIONAL)</p>
+        </div>
+        
+        <!-- Microchip -->
+        <div class="text-center p-6">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="cpu" class="w-16 h-16 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold uppercase mb-4">MICROCHIP</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Es un dispositivo que se implanta en los cachorros desde su país de origen para identificarles de manera única, facilitando su recuperación en caso de pérdida y verificando su propiedad.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">(COSTO ADICIONAL)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="w-full bg-[#F7F7F7] py-12 md:py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-primary font-semibold mb-2">PUPPY TOY PERÚ</p>
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Preguntas Frecuentes</h2>
+      </div>
+      
+      <div class="space-y-4" id="faq-container">
+        <!-- FAQ Items -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Cómo Adquiero a mi cachorro?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Agendas una visita a través de nuestro único número de WhatsApp a nombre del propietario, realizas la reservación de 200 soles y enseguida te brindaremos los cachorros disponibles para que puedas venir escoger a tu nuevo ejemplar en nuestras instalaciones.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">¿Realizan envíos nacionales?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Si claro, se programa el pago del envió y te brindamos dos opciones de envió mayormente dependen del tamaño y la edad del cachorro para escoger una vía aérea o terrestre, te realizamos una videollamada para que puedas ver y comprobar que será el mismo cachorro que te ofrecieron, adicionalmente te indicaremos su número de identificación a través del lector de microchip, su documentación senasa con el mismo nombre y código.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Compromiso: Garantía y Trasparencia</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Es una decisión más que importante incorporar un cachorrito a casa es un momento único. Los invitamos a conocernos en persona, a ponerse en contacto con papis de perritos nuestros que vivan en su zona, o a tener una videollamada con nosotros. No se cansen de preguntar y buscar antes de decidir. Nunca hay que precipitarse, es por ello que en Puppy Toy te brindaremos toda la documentación de tu cachorro desde su país de origen.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Traslado del cachorro a Perú</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Todos nuestros cachorros son recogidos por transportistas autorizados y con ellos sus documentos de importación y legalidad para ser traídos a Perú, brindándoles descansos para que los cachorros no se estresen y adicional a ellos suplementándolos vitamínicamente para fortalecer su sistema inmunológico.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Estafas comunes</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            En nuestra trayectoria como criadores responsables, hemos detectado diversas estafas, como el pintado ilegal de los cachorros para hacerlos parecer de un color más costoso. También hemos observado intentos de asegurar un tamaño de cachorro que, con el tiempo, no se cumple. Además, algunas personas indican que sus cachorros tienen microchip de identificación, asegurando que sea uno nacional; en estos casos, nosotros brindamos el código internacional del microchip. Otra problemática es la usurpación de identidad; por ello, garantizamos a nuestros clientes que el mismo código del propietario aparece en todos los documentos y depósitos realizados.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Nombre de empresa</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Por seguridad solo brindamos los datos de la empresa a nuestros clientes, siendo así el número de cuenta bancaria, nombre del criador, datos del transportista senasa, datos del código microchip internacional.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Alergia - Hipoalergénico</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            El caniche es considerado un cachorro hipoalergénico porque no pierde mucho pelo, tiene menos escamas en la piel y produce menos saliva, lo que reduce las probabilidades de causar alergias. Además, existen vacunas para tratar estas alergias si fuera necesario. Si has tocado un caniche y te ha dado alergia, es importante verificar si realmente es un caniche puro o un cruce, ya que los cruces pueden tener más potencial alergénico.
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-all">
+            <span class="font-semibold text-gray-800">Características de un Caniche</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600">
+            Destaca por su tamaño, pelo rizado y colorido, y su carácter amigable y activo. Aunque generalmente saludable, requiere cuidados específicos como un cepillado regular, ejercicio moderado, buena alimentación y revisiones veterinarias. Su historia, belleza y temperamento lo convierten en un compañero ideal para familias. En el Criadero de Caniches Puppy Toy, se enfatiza la importancia de la salud y el bienestar de la raza mediante pruebas y cuidado responsable.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="w-full bg-white py-12 md:py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="truck" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Entrega a Domicilio</h3>
+          <p class="text-gray-600 text-sm">Recibe a tu caniche en la puerta de tu hogar, con total seguridad y cariño.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="gift" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Regalo Especial</h3>
+          <p class="text-gray-600 text-sm">Sorprende a quien más quieres con un tierno caniche lleno de amor.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="award" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Cachorros de Calidad</h3>
+          <p class="text-gray-600 text-sm">Caniches con pedigree, vacunados y criados en ambiente familiar</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <i data-lucide="shield-check" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Compra con Confianza</h3>
+          <p class="text-gray-600 text-sm">Atención personalizada y asesoría antes y después de la compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain">
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+        <a href="/cachorros" class="text-gray-600 hover:text-primary transition-colors">Cachorros</a>
+        <a href="/familia" class="text-gray-600 hover:text-primary transition-colors">Familia</a>
+        <a href="/informacion" class="text-gray-600 hover:text-primary transition-colors">Información</a>
+        <a href="/visitanos" class="text-gray-600 hover:text-primary transition-colors">Visitanos</a>
+        <a href="/mini-toy" class="text-gray-600 hover:text-primary transition-colors">Mini Toy</a>
+        <a href="/toy" class="text-gray-600 hover:text-primary transition-colors">Toy</a>
+        <a href="/enano" class="text-gray-600 hover:text-primary transition-colors">Enano</a>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
+        <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          contacto@puppytoy.com
+        </a>
+        <a href="tel:+51960724528" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          +51 960 724 528
+        </a>
+        <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          @puppytoyperu
+        </a>
+      </div>
+      
+      <!-- Location -->
+      <div class="text-center mb-6">
+        <p class="text-gray-600 flex items-center justify-center gap-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+          LIMA, PERÚ - Oficina Presencial – Los Olivos
+        </p>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-200 pt-6 text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2025 - Uso exclusivo y todos los derechos reservados legalmente Puppy Toy Perú
+        </p>
+      </div>
+      
+      <!-- Scroll to Top -->
+      <div class="text-center mt-4">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-500 hover:text-primary transition-colors text-sm">
+          Regresar arriba
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('[data-lucide="chevron-down"]');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(c => {
+          if (c !== content) c.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-toggle svg').forEach(i => {
+          if (i !== icon) i.style.transform = 'rotate(0deg)';
+        });
+        
+        // Toggle current FAQ
+        content.classList.toggle('hidden');
+        icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    });
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    let mobileMenuOpen = false;
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOpen = !mobileMenuOpen;
+      // Implement mobile menu toggle logic here
+    });
+  </script>
+</body>
+</html>

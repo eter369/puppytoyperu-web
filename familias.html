@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Familia - PUPPY TOY PERÚ</title>
+  <meta name="description" content="Familias que han adoptado nuestros cachorros Caniche/Poodle. Conoce las historias de nuestros clientes satisfechos.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* WhatsApp Float Button - Mario Style */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wa-float__aura {
+      position: absolute;
+      inset: -22px;
+      border-radius: 80px;
+      background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.28) 0%, rgba(192, 57, 43, 0.08) 50%, transparent 72%);
+      animation: aura-breathe 2.2s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes aura-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.35); opacity: 0; }
+    }
+    .wa-float__ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 60px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wa-float__ring--1 { border: 2px solid rgba(192, 57, 43, 0.35); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .wa-float__ring--2 { border: 1.5px solid rgba(192, 57, 43, 0.22); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.4s; }
+    .wa-float__ring--3 { border: 1px solid rgba(192, 57, 43, 0.10); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.8s; }
+    @keyframes ring-expand {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.65); opacity: 0; }
+    }
+    .wa-float__btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #c0392b 0%, #a83224 100%);
+      padding: 10px 28px 10px 10px;
+      border-radius: 60px;
+      z-index: 2;
+      overflow: hidden;
+      animation: heartbeat 1.8s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+    .wa-float:hover .wa-float__btn { filter: brightness(1.12); transform: scale(1.03); }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.07); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.04); }
+      56% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .wa-float__btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      animation: sheen-sweep 4.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes sheen-sweep { 0%, 100% { left: -100%; } 50% { left: 150%; } }
+    .wa-float__icon {
+      position: relative;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .wa-float__icon img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; position: relative; z-index: 1; }
+    .wa-float__icon-glow {
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: rgba(255, 204, 0, 0.4);
+      animation: icon-glow 2.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes icon-glow { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.4); opacity: 0; } }
+    .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
+    .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
+    .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
+    @media (max-width: 480px) {
+      .wa-float { bottom: 20px; right: 16px; }
+      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
+      .wa-float__icon { width: 40px; height: 40px; }
+      .wa-float__icon img { width: 48px; height: 48px; }
+      .wa-float__label { font-size: 10px; }
+      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
+    }
+    @media (max-width: 360px) {
+      .wa-float__text { display: none; }
+      .wa-float__btn { padding: 8px; border-radius: 50%; }
+      .wa-float__ring { border-radius: 50%; }
+      .wa-float__aura { border-radius: 50%; }
+    }
+    
+    /* Video carousel styles */
+    .video-card {
+      flex-basis: calc(33.333% - 17px);
+      min-width: 280px;
+      max-width: 450px;
+    }
+    
+    @media (max-width: 1024px) {
+      .video-card {
+        flex-basis: calc(50% - 13px);
+        min-width: 250px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .video-card {
+        flex-basis: 48%;
+        min-width: 45%;
+      }
+    }
+    
+    /* TikTok embed styles */
+    .tiktok-container {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    
+    /* FAQ Accordion styles */
+    details {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary .chevron {
+      transform: rotate(180deg);
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    
+    /* Product card hover */
+    .product-card {
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    /* Category card styles */
+    .category-card {
+      transition: all 0.3s ease;
+    }
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Certificado card */
+    .cert-card {
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-white">
+  
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Top Contact Bar -->
+    <div class="w-full py-2 px-4 bg-primary">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
+        <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
+        <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="filter: brightness(0) invert(1);">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          +51 920 688 338
+        </a>
+      </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
+      <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Inicio</a>
+          <a href="/cachorros.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Cachorros</a>
+          <a href="/familias.html" class="px-6 py-2 rounded-full text-sm font-medium text-white border-2 border-primary bg-primary">Familias</a>
+          <a href="/informacion.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Información</a>
+          <a href="/visitanos.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Visítanos</a>
+        </div>
+        
+        <!-- Cart -->
+        <div class="hidden lg:flex items-center">
+          <a href="/cachorros.html" class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+  
+  <!-- Hero Section with Video -->
+  <section class="w-full flex flex-col items-center justify-center pt-12 pb-8 px-4">
+    <h1 class="text-3xl md:text-5xl font-bold text-black text-center mb-6">Familias en nuestras instalaciones</h1>
+    
+    <div class="w-full max-w-4xl mx-auto">
+      <div class="relative rounded-3xl overflow-hidden" style="padding-top: 56.25%;">
+        <iframe src="https://player.vimeo.com/video/1145848703?transparent=0&loop=1&controls=0&autoplay=1&color=rgb(202,60,24)&muted=1" 
+                class="absolute inset-0 w-full h-full bg-black"
+                frameborder="0" allow="autoplay; fullscreen" title="Familias Puppy Toy"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bienvenido Section -->
+  <section class="w-full py-12 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Bienvenido a la familia de PUPPY TOY PERÚ</h2>
+      <p class="text-lg text-gray-600">Donde cada cachorro encuentra su hogar perfecto</p>
+    </div>
+  </section>
+  
+  <!-- Cachorros en el Extranjero Section -->
+  <section class="w-full py-16 px-4 relative overflow-hidden" style="background: linear-gradient(135deg, #C83B15 0%, #a03010 100%);">
+    <!-- Star pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Nuestros cachorros en el extranjero</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-3">
+            <span class="text-4xl">🇺🇸</span>
+          </div>
+          <p class="text-white font-medium">Estados Unidos</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-3">
+            <span class="text-4xl">🇨🇱</span>
+          </div>
+          <p class="text-white font-medium">Chile</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-3">
+            <span class="text-4xl">🇦🇷</span>
+          </div>
+          <p class="text-white font-medium">Argentina</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-3">
+            <span class="text-4xl">🇪🇨</span>
+          </div>
+          <p class="text-white font-medium">Ecuador</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Video Carousel Section -->
+  <section class="w-full bg-[#F8F8F8] border-b-[6px] border-black py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-black text-center mb-8">Entrega de nuestros cachorros a sus familias</h2>
+      
+      <div class="relative">
+        <!-- Video Cards Container -->
+        <div class="flex gap-6 overflow-x-auto scrollbar-hide pb-4" id="video-carousel">
+          
+          <!-- Video Card 1 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158025494?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 1"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 2 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 2"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 3 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 3"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 4 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016638?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 4"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 5 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016631?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 5"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 6 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016624?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 6"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 7 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016617?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 7"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 8 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016610?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 8"></iframe>
+            </div>
+          </div>
+          
+          <!-- Video Card 9 -->
+          <div class="video-card bg-white border-[6px] border-primary rounded-[20px] overflow-hidden flex-shrink-0">
+            <div class="relative bg-black" style="padding-top: 177.78%;">
+              <iframe src="https://player.vimeo.com/video/1158016603?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
+                      class="absolute inset-0 w-full h-full"
+                      frameborder="0" allow="autoplay" title="Video 9"></iframe>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Carousel Controls -->
+        <div class="flex justify-center items-center gap-5 mt-8">
+          <button id="prev-btn" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+          </button>
+          
+          <div class="flex gap-3">
+            <div class="w-3 h-3 rounded-full bg-primary/30 cursor-pointer"></div>
+            <div class="w-3 h-3 rounded-full bg-primary cursor-pointer"></div>
+            <div class="w-3 h-3 rounded-full bg-primary/30 cursor-pointer"></div>
+          </div>
+          
+          <button id="next-btn" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certificados Section -->
+  <section class="w-full py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-black text-center mb-12">Nuestros Certificados</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Test Canino -->
+        <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
+          <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="clipboard-check" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Test Canino</h3>
+          <p class="text-gray-600">Evaluación completa de salud y comportamiento para garantizar cachorros sanos y equilibrados.</p>
+        </div>
+        
+        <!-- Pedigree -->
+        <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
+          <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="award" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Pedigree</h3>
+          <p class="text-gray-600">Documentación certificada de pureza racial y árbol genealógico de cada cachorro.</p>
+        </div>
+        
+        <!-- Microchip -->
+        <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
+          <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="cpu" class="w-12 h-12 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-3">Microchip</h3>
+          <p class="text-gray-600">Identificación permanente con microchip internacional para la seguridad de tu mascota.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TikTok Section -->
+  <section class="w-full py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-center gap-3 mb-10">
+        <svg width="40" height="40" viewBox="0 0 32 32" fill="#000000">
+          <path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm8.5 14.5c-.5 0-1-.1-1.5-.2v5.7c0 3.5-2.8 6.3-6.3 6.3s-6.3-2.8-6.3-6.3 2.8-6.3 6.3-6.3c.3 0 .5 0 .8.1v3.5c-.3-.1-.5-.1-.8-.1-1.6 0-2.9 1.3-2.9 2.9s1.3 2.9 2.9 2.9 2.9-1.3 2.9-2.9V5h3.5c.1.5.2 1 .2 1.5 0 2.5 2 4.5 4.5 4.5v3.5z"/>
+        </svg>
+        <h2 class="text-2xl md:text-3xl font-bold text-black">Síguenos en TikTok</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- TikTok Video 1 -->
+        <div class="tiktok-container">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg" style="padding-top: 177.78%; position: relative;">
+            <iframe 
+              src="https://www.tiktok.com/embed/v2/7589791279467285781"
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="TikTok Video 1">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- TikTok Video 2 -->
+        <div class="tiktok-container">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg" style="padding-top: 177.78%; position: relative;">
+            <iframe 
+              src="https://www.tiktok.com/embed/v2/7589767255076982036"
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="TikTok Video 2">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- TikTok Video 3 -->
+        <div class="tiktok-container">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg" style="padding-top: 177.78%; position: relative;">
+            <iframe 
+              src="https://www.tiktok.com/embed/v2/7591283544345890068"
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="TikTok Video 3">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="w-full py-16 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-black text-center mb-10">Preguntas Frecuentes</h2>
+      
+      <div class="space-y-0">
+        <!-- FAQ 1 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Cuánto tiempo de garantía tienen los cachorros?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Todos nuestros cachorros cuentan con 15 días de garantía de salud por enfermedades virales y un año por defectos genéticos hereditarios.</p>
+        </details>
+        
+        <!-- FAQ 2 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Los cachorros vienen vacunados?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Sí, todos nuestros cachorros vienen con su primera dosis de vacuna y desparasitación al día. Entregamos el carnet de vacunación actualizado.</p>
+        </details>
+        
+        <!-- FAQ 3 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Puedo visitar las instalaciones?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">¡Por supuesto! Puedes agendar una visita a nuestras instalaciones en Los Olivos, Lima. Contáctanos al +51 920 688 338 para coordinar.</p>
+        </details>
+        
+        <!-- FAQ 4 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Realizan envíos a provincia?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Sí, realizamos envíos a todo el Perú mediante empresas de transporte confiables. También hacemos envíos internacionales.</p>
+        </details>
+        
+        <!-- FAQ 5 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Qué incluye la compra de un cachorro?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Incluye: cachorro con pedigree, microchip, carnet de vacunación, desparasitación, kit de bienvenida, contrato de compraventa y garantía de salud.</p>
+        </details>
+        
+        <!-- FAQ 6 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Cuál es la diferencia entre Mini Toy, Toy y Enano?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Mini Toy: hasta 2.5 kg adulto. Toy: de 2.5 a 4 kg adulto. Enano: de 4 a 6 kg adulto. Cada categoría tiene características únicas de tamaño y temperamento.</p>
+        </details>
+        
+        <!-- FAQ 7 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Aceptan tarjeta de crédito?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Sí, aceptamos todas las tarjetas de crédito y débito, transferencias bancarias, Yape, Plin y pagos en efectivo.</p>
+        </details>
+        
+        <!-- FAQ 8 -->
+        <details class="py-4">
+          <summary class="flex items-center justify-between text-lg font-medium text-black">
+            <span>¿Puedo reservar un cachorro?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+          </summary>
+          <p class="mt-3 text-gray-600">Sí, puedes reservar tu cachorro con un adelanto. El monto de la reserva se descuenta del precio total. Contáctanos para más información.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="w-full py-12 px-4 bg-gray-50 border-t-2 border-gray-200">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="truck" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h4 class="font-bold text-black">Envíos a Todo el Perú</h4>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="gift" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h4 class="font-bold text-black">Kit de Bienvenida</h4>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h4 class="font-bold text-black">Garantía de Salud</h4>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <i data-lucide="heart-handshake" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h4 class="font-bold text-black">Asesoría Permanente</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-white">
+    <!-- Logo Section -->
+    <div class="flex justify-center py-8">
+      <a href="/" class="w-32">
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/07/LOGOTIPO-PUPPY-TOY-1.svg" 
+             alt="Puppy Toy Perú" class="w-full h-auto">
+      </a>
+    </div>
+    
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-20 py-4 text-primary">
+      <a href="https://instagram.com/puppytoyperu" target="_blank" class="hover:opacity-80 transition-all">
+        <svg width="50" height="50" viewBox="0 0 448 512" fill="currentColor">
+          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/51920688338" target="_blank" class="hover:opacity-80 transition-all">
+        <svg width="50" height="50" viewBox="0 0 448 512" fill="currentColor">
+          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Links Section -->
+    <div class="border-b-2 border-gray-200 py-6">
+      <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-10">
+        <!-- Left Column -->
+        <div class="text-center">
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="/cachorros.html" class="hover:text-primary transition-colors">Cachorros</a></li>
+            <li><span class="text-primary">Familia</span></li>
+            <li><a href="/informacion.html" class="hover:text-primary transition-colors">Información</a></li>
+            <li><a href="/visitanos.html" class="hover:text-primary transition-colors">Visitanos</a></li>
+          </ul>
+        </div>
+        
+        <!-- Divider -->
+        <div class="flex items-center">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/LINEA-1300x512.webp" 
+               alt="Divider" class="w-80 h-auto">
+        </div>
+        
+        <!-- Right Column -->
+        <div class="text-center">
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="/cachorros.html" class="hover:text-primary transition-colors">Mini Toy</a></li>
+            <li><a href="/cachorros.html" class="hover:text-primary transition-colors">Toy</a></li>
+            <li><a href="/cachorros.html" class="hover:text-primary transition-colors">Enano</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="flex flex-wrap justify-center gap-8 py-6 text-xl text-gray-500">
+      <h2>contacto@puppytoy.com</h2>
+      <div class="flex items-center gap-5">
+        <h2>+51 920 688 338</h2>
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/LINEA-1300x512.webp" 
+             alt="Divider" class="w-28 h-auto">
+        <h2>@puppytoyperu</h2>
+      </div>
+    </div>
+    
+    <!-- Payment Methods -->
+    <div class="flex justify-center py-4">
+      <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/PAGOS2-1300x135.webp" 
+           alt="Métodos de pago" class="w-72 h-auto">
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="bg-primary text-white py-10">
+      <div class="max-w-6xl mx-auto flex flex-wrap justify-center items-center gap-10">
+        <div class="text-center">
+          <p>LIMA, PERÚ</p>
+          <p class="font-light">Oficina Presencial – Los Olivos</p>
+        </div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                class="px-12 py-2 border border-white/50 rounded-full text-sm uppercase tracking-wider hover:bg-white/10 transition-all">
+          Regresar arriba
+        </button>
+        <div class="text-right text-sm">
+          <p><em class="italic">© 2025 –</em> TOY</p>
+          <p>Todos los derechos reservados</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Float Button - Mario Style -->
+  <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="wa-float__aura"></span>
+    <span class="wa-float__ring wa-float__ring--1"></span>
+    <span class="wa-float__ring wa-float__ring--2"></span>
+    <span class="wa-float__ring wa-float__ring--3"></span>
+    <span class="wa-float__btn">
+      <span class="wa-float__icon">
+        <span class="wa-float__icon-glow"></span>
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'">
+      </span>
+      <span class="wa-float__text">
+        <span class="wa-float__label">WhatsApp directo</span>
+        <span class="wa-float__number">+51 920 688 338</span>
+      </span>
+    </span>
+  </a>
+  
+  <!-- Mobile Menu Sidebar -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50" onclick="closeMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="mobile-menu-panel">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h3 class="text-xl font-bold">Menú</h3>
+          <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="space-y-4">
+          <a href="/" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Inicio</a>
+          <a href="/cachorros.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Cachorros</a>
+          <a href="/familias.html" class="block py-3 px-4 rounded-lg bg-primary text-white font-medium">Familias</a>
+          <a href="/informacion.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Información</a>
+          <a href="/visitanos.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Visítanos</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenuPanel.classList.remove('translate-x-full');
+      }, 10);
+    });
+    
+    function closeMobileMenu() {
+      mobileMenuPanel.classList.add('translate-x-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+    }
+    
+    // Carousel scroll functionality
+    const carousel = document.getElementById('video-carousel');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    
+    // Auto-redirect to WhatsApp on first visit
+    (function() {
+      const hasVisited = sessionStorage.getItem('whatsappRedirect');
+      if (!hasVisited) {
+        sessionStorage.setItem('whatsappRedirect', 'true');
+        setTimeout(() => {
+          window.open('https://wa.me/51920688338', '_blank');
+        }, 2000);
+      }
+    })();
+  </script>
+</body>
+</html>

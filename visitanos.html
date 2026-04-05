@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visítanos - Puppy Toy Perú</title>
+  <meta name="description" content="Visita nuestras instalaciones en Los Olivos, Lima. Agenda una cita y conoce a nuestros cachorros Caniche/Poodle en persona.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    
+    /* WhatsApp Float Button - Mario Style */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wa-float__aura {
+      position: absolute;
+      inset: -22px;
+      border-radius: 80px;
+      background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.28) 0%, rgba(192, 57, 43, 0.08) 50%, transparent 72%);
+      animation: aura-breathe 2.2s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes aura-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.35); opacity: 0; }
+    }
+    .wa-float__ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 60px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wa-float__ring--1 { border: 2px solid rgba(192, 57, 43, 0.35); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .wa-float__ring--2 { border: 1.5px solid rgba(192, 57, 43, 0.22); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.4s; }
+    .wa-float__ring--3 { border: 1px solid rgba(192, 57, 43, 0.10); animation: ring-expand 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 0.8s; }
+    @keyframes ring-expand {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.65); opacity: 0; }
+    }
+    .wa-float__btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #c0392b 0%, #a83224 100%);
+      padding: 10px 28px 10px 10px;
+      border-radius: 60px;
+      z-index: 2;
+      overflow: hidden;
+      animation: heartbeat 1.8s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+    .wa-float:hover .wa-float__btn { filter: brightness(1.12); transform: scale(1.03); }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.07); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.04); }
+      56% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .wa-float__btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      animation: sheen-sweep 4.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes sheen-sweep { 0%, 100% { left: -100%; } 50% { left: 150%; } }
+    .wa-float__icon {
+      position: relative;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .wa-float__icon img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; position: relative; z-index: 1; }
+    .wa-float__icon-glow {
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: rgba(255, 204, 0, 0.4);
+      animation: icon-glow 2.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes icon-glow { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.4); opacity: 0; } }
+    .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
+    .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
+    .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
+    @media (max-width: 480px) {
+      .wa-float { bottom: 20px; right: 16px; }
+      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
+      .wa-float__icon { width: 40px; height: 40px; }
+      .wa-float__icon img { width: 48px; height: 48px; }
+      .wa-float__label { font-size: 10px; }
+      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
+    }
+    @media (max-width: 360px) {
+      .wa-float__text { display: none; }
+      .wa-float__btn { padding: 8px; border-radius: 50%; }
+      .wa-float__ring { border-radius: 50%; }
+      .wa-float__aura { border-radius: 50%; }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="w-full py-2 px-4 bg-primary">
+      <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
+        <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
+        <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          +51 920 688 338
+        </a>
+      </div>
+    </div>
+    
+    <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
+      <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <a href="/" class="flex-shrink-0">
+          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+        </a>
+        
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Inicio</a>
+          <a href="/cachorros.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Cachorros</a>
+          <a href="/familias.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Familias</a>
+          <a href="/informacion.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-700 border-2 border-gray-300 hover:border-primary hover:text-primary transition-all bg-white">Información</a>
+          <a href="/visitanos.html" class="px-6 py-2 rounded-full text-sm font-medium text-white border-2 border-primary bg-primary">Visítanos</a>
+        </div>
+        
+        <div class="hidden lg:flex items-center">
+          <button class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+          </button>
+        </div>
+        
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="h-28"></div>
+  
+  <!-- Breadcrumb -->
+  <div class="w-full bg-gray-50 py-4 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="/" class="hover:text-primary">Inicio</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-primary font-medium">Visítanos</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="w-full bg-primary py-16 md:py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-3xl md:text-5xl font-bold uppercase text-white mb-4">Visítanos</h1>
+      <p class="text-xl text-white/90">¡Envíanos un mensaje! Agenda una cita con nosotros</p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Contact Form -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold uppercase mb-6">Agenda una cita con nosotros</h2>
+          <form class="space-y-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+              <input type="text" placeholder="Tu nombre" 
+                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+              <input type="email" placeholder="tu@email.com" 
+                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Teléfono</label>
+              <input type="tel" placeholder="+51 999 999 999" 
+                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Mensaje</label>
+              <textarea rows="4" placeholder="¿En qué podemos ayudarte?" 
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl font-bold uppercase mb-6">Contáctanos</h2>
+          <p class="text-gray-600 mb-8">Envíanos un breve mensaje a través de nuestro formulario de contacto en línea. Te responderemos lo antes posible.</p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Correo Electrónico</h3>
+                <a href="mailto:Contacto@puppytoyperu.com" class="text-primary hover:underline">Contacto@puppytoyperu.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Dirección</h3>
+                <p class="text-gray-600">Lima - Perú - Los Olivos</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Teléfono</h3>
+                <a href="tel:+51920688338" class="text-primary hover:underline">+51 920 688 338</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="clock" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Horario de atención</h3>
+                <p class="text-gray-600">Lunes a Sábado: 9:00 AM - 6:00 PM</p>
+                <p class="text-gray-600">Domingo: Previa cita</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="mt-8">
+            <h3 class="font-semibold text-gray-800 mb-4">Síguenos en redes</h3>
+            <div class="flex gap-4">
+              <a href="https://instagram.com/puppytoyperu" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+              </a>
+              <a href="https://facebook.com/puppytoyperu" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </a>
+              <a href="https://wa.me/51920688338" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Map Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Nuestra Ubicación</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15613.712437574073!2d-77.07952044458009!3d-11.954725899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce53c5a5a5a5%3A0x5a5a5a5a5a5a5a5a!2sLos%20Olivos%2C%20Lima%2C%20Per%C3%BA!5e0!3m2!1ses!2sus!4v1609459200000!5m2!1ses!2sus" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" title="Ubicación Puppy Toy Perú"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Visit Info Section -->
+  <section class="w-full py-12 md:py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase text-black">Información para tu visita</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Info 1 -->
+        <div class="bg-gray-50 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="calendar-check" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Cita previa</h3>
+          <p class="text-gray-600">Para garantizar una atención personalizada, solicitamos agendar una cita previa antes de tu visita.</p>
+        </div>
+        
+        <!-- Info 2 -->
+        <div class="bg-gray-50 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="users" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Acompañantes</h3>
+          <p class="text-gray-600">Puedes venir con tu familia. ¡Los niños son bienvenidos! Nuestros cachorros adoran conocer a sus futuras familias.</p>
+        </div>
+        
+        <!-- Info 3 -->
+        <div class="bg-gray-50 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="heart" class="w-8 h-8 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase mb-2">Interacción</h3>
+          <p class="text-gray-600">Durante tu visita podrás interactuar con los cachorros disponibles y elegir al que más te guste.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- WhatsApp CTA -->
+  <section class="w-full bg-primary py-16 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase text-white mb-4">¿Prefieres escribirnos?</h2>
+      <p class="text-xl text-white/90 mb-8">Contáctanos directamente por WhatsApp para una respuesta más rápida</p>
+      <a href="https://wa.me/51920688338" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
+             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain">
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visítanos</a>
+        <a href="/familias.html" class="text-gray-600 hover:text-primary transition-colors">Familia</a>
+        <a href="/informacion.html" class="text-gray-600 hover:text-primary transition-colors">Información</a>
+        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visitanos</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Mini Toy</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Toy</a>
+        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Enano</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
+        <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          contacto@puppytoy.com
+        </a>
+        <a href="tel:+51920688338" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          +51 920 688 338
+        </a>
+        <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          @puppytoyperu
+        </a>
+      </div>
+      <div class="text-center mb-6">
+        <p class="text-gray-600 flex items-center justify-center gap-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+          LIMA, PERÚ - Oficina Presencial – Los Olivos
+        </p>
+      </div>
+      <div class="border-t border-gray-200 pt-6 text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2025 - Uso exclusivo y todos los derechos reservados legalmente Puppy Toy Perú
+        </p>
+      </div>
+      <div class="text-center mt-4">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-500 hover:text-primary transition-colors text-sm">
+          Regresar arriba
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- WhatsApp Float Button - Mario Style -->
+  <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="wa-float__aura"></span>
+    <span class="wa-float__ring wa-float__ring--1"></span>
+    <span class="wa-float__ring wa-float__ring--2"></span>
+    <span class="wa-float__ring wa-float__ring--3"></span>
+    <span class="wa-float__btn">
+      <span class="wa-float__icon">
+        <span class="wa-float__icon-glow"></span>
+        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;">
+      </span>
+      <span class="wa-float__text">
+        <span class="wa-float__label">WhatsApp directo</span>
+        <span class="wa-float__number">+51 920 688 338</span>
+      </span>
+    </span>
+  </a>
+
+</body>
+</html>
