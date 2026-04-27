@@ -144,19 +144,14 @@
     .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
     .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
     .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
-    @media (max-width: 480px) {
-      .wa-float { bottom: 20px; right: 16px; }
-      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
-      .wa-float__icon { width: 40px; height: 40px; }
-      .wa-float__icon img { width: 48px; height: 48px; }
-      .wa-float__label { font-size: 10px; }
-      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
-    }
-    @media (max-width: 360px) {
+    @media (max-width: 640px) {
+      .wa-float { bottom: 16px; right: 12px; }
       .wa-float__text { display: none; }
-      .wa-float__btn { padding: 8px; border-radius: 50%; }
-      .wa-float__ring { border-radius: 50%; }
-      .wa-float__aura { border-radius: 50%; }
+      .wa-float__btn { padding: 6px; border-radius: 50%; gap: 0; }
+      .wa-float__icon { width: 44px; height: 44px; }
+      .wa-float__icon img { width: 52px; height: 52px; }
+      .wa-float__ring { border-radius: 50%; inset: -4px; }
+      .wa-float__aura { border-radius: 50%; inset: -14px; }
     }
     
     /* Video card styles */
@@ -427,7 +422,7 @@
     }
     .ticker-center:hover .cta-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
     @media (max-width: 768px) {
-      .ticker-bar { height: 46px; }
+      .ticker-bar { height: 48px; }
       .cta-status { display: none; }
       .cta-number-area { border-radius: 60px 0 0 60px; padding: 6px 16px; }
       .cta-number { font-size: 13px; letter-spacing: 1px; }
@@ -437,9 +432,16 @@
       .ticker-center::before { display: none; }
       .cta-tooltip { display: none; }
     }
+    /* On mobile hide the marquee track so the centered CTA doesn't overlap */
+    @media (max-width: 640px) {
+      .ticker-track-wrapper { display: none; }
+      .ticker-bar { height: 48px; background: linear-gradient(90deg, #1a0a07 0%, #2a1410 100%); }
+      .ticker-center { position: static; transform: none; margin: 0 auto; height: 100%; }
+      .ticker-bar { display: flex; align-items: center; justify-content: center; }
+    }
     @media (max-width: 420px) {
-      .cta-number { font-size: 11.5px; letter-spacing: 0.5px; }
-      .cta-number-area { padding: 6px 12px; }
+      .cta-number { font-size: 12px; letter-spacing: 0.5px; }
+      .cta-number-area { padding: 6px 14px; }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">

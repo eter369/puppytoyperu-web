@@ -142,19 +142,14 @@
     .wa-float__text { display: flex; flex-direction: column; gap: 2px; }
     .wa-float__label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.8px; line-height: 1; }
     .wa-float__number { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: 1.5px; line-height: 1.2; }
-    @media (max-width: 480px) {
-      .wa-float { bottom: 20px; right: 16px; }
-      .wa-float__btn { padding: 8px 22px 8px 8px; gap: 10px; }
-      .wa-float__icon { width: 40px; height: 40px; }
-      .wa-float__icon img { width: 48px; height: 48px; }
-      .wa-float__label { font-size: 10px; }
-      .wa-float__number { font-size: 15px; letter-spacing: 1px; }
-    }
-    @media (max-width: 360px) {
+    @media (max-width: 640px) {
+      .wa-float { bottom: 16px; right: 12px; }
       .wa-float__text { display: none; }
-      .wa-float__btn { padding: 8px; border-radius: 50%; }
-      .wa-float__ring { border-radius: 50%; }
-      .wa-float__aura { border-radius: 50%; }
+      .wa-float__btn { padding: 6px; border-radius: 50%; gap: 0; }
+      .wa-float__icon { width: 44px; height: 44px; }
+      .wa-float__icon img { width: 52px; height: 52px; }
+      .wa-float__ring { border-radius: 50%; inset: -4px; }
+      .wa-float__aura { border-radius: 50%; inset: -14px; }
     }
   </style>
 </head>
@@ -446,8 +441,43 @@
     </div>
   </footer>
   
+  <!-- Mobile Menu Sidebar -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50" onclick="closeMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="mobile-menu-panel">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h3 class="text-xl font-bold">Menú</h3>
+          <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Cerrar menú">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="space-y-3">
+          <a href="/" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Inicio</a>
+          <a href="/cachorros.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Cachorros</a>
+          <a href="/familias.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Familias</a>
+          <a href="/informacion.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 text-gray-700 font-medium">Información</a>
+          <a href="/visitanos.html" class="block py-3 px-4 rounded-lg bg-primary text-white font-medium">Visítanos</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
   <script>
     lucide.createIcons();
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileMenuPanel.classList.remove('translate-x-full'), 10);
+      });
+    }
+    function closeMobileMenu() {
+      mobileMenuPanel.classList.add('translate-x-full');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    }
   </script>
   <!-- WhatsApp Float Button - Mario Style -->
   <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
