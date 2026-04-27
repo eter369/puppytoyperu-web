@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUPPY TOY PERÚ - Criadores de Caniche/Poodle</title>
-  <meta name="description" content="Criadores de Caniche/Poodle en Perú. Más de 10 años de experiencia. Cachorros con pedigree, vacunados y con garantía de salud.">
+  <title>Cachorros Caniche Poodle en Lima, Perú | Puppy Toy Perú</title>
+  <meta name="description" content="Criadero certificado de Caniche/Poodle Toy, Mini Toy y Enano en Los Olivos, Lima. +10 años de experiencia, pedigree, vacunados y garantía de salud. ¡Agenda tu visita!">
+  <link rel="canonical" href="https://puppytoyperuoficial.com/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -13,18 +14,19 @@
 
   <!-- Open Graph / WhatsApp -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
   <meta property="og:url" content="https://puppytoyperuoficial.com/">
-  <meta property="og:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta property="og:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia. Cachorros con pedigree, vacunados y con garantia de salud.">
+  <meta property="og:title" content="Cachorros Caniche Poodle en Lima, Perú | Puppy Toy Perú">
+  <meta property="og:description" content="Criadero certificado de Caniche/Poodle en Los Olivos, Lima. +10 años de experiencia, pedigree, vacunados y garantía de salud.">
   <meta property="og:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
   <meta property="og:image:width" content="1500">
   <meta property="og:image:height" content="844">
-  <meta property="og:site_name" content="Puppy Toy Peru">
+  <meta property="og:site_name" content="Puppy Toy Perú">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta name="twitter:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia.">
+  <meta name="twitter:title" content="Cachorros Caniche Poodle en Lima, Perú | Puppy Toy Perú">
+  <meta name="twitter:description" content="Criadero certificado en Los Olivos, Lima. +10 años criando Poodle Toy, Mini Toy y Enano con pedigree y garantía.">
   <meta name="twitter:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
 
   <!-- Tailwind CSS -->
@@ -44,9 +46,56 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Preconnect a CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.294.0"></script>
-  
+  <script src="https://unpkg.com/lucide@0.294.0" defer></script>
+
+  <!-- JSON-LD: LocalBusiness + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness","PetStore"],
+        "@id": "https://puppytoyperuoficial.com/#business",
+        "name": "Puppy Toy Perú",
+        "image": "https://puppytoyperuoficial.com/images/logo-puppy-toy.webp",
+        "logo": "https://puppytoyperuoficial.com/images/logo-puppy-toy.webp",
+        "url": "https://puppytoyperuoficial.com/",
+        "telephone": "+51920688338",
+        "email": "Contacto@puppytoyperu.com",
+        "priceRange": "S/2,000 - S/5,000",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Los Olivos",
+          "addressRegion": "Lima",
+          "addressCountry": "PE"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }],
+        "description": "Criadero certificado de Caniche/Poodle Toy, Mini Toy y Enano en Los Olivos, Lima. +10 años de experiencia, pedigree, vacunados y garantía de salud."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://puppytoyperuoficial.com/#website",
+        "url": "https://puppytoyperuoficial.com/",
+        "name": "Puppy Toy Perú",
+        "inLanguage": "es-PE",
+        "publisher": { "@id": "https://puppytoyperuoficial.com/#business" }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { font-family: 'Inter', sans-serif; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -443,10 +492,20 @@
       .cta-number { font-size: 12px; letter-spacing: 0.5px; }
       .cta-number-area { padding: 6px 14px; }
     }
+
+    /* Accesibilidad: respeta prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .ticker-track, .paw, .wa-float__btn, .wa-float__aura, .wa-float__ring, .wa-float__icon-glow, .cta-dot::after, .cta-number-area::after, .ticker-bar::before, .ticker-center::before { animation: none !important; }
+    }
+    /* Skip link a11y */
+    .skip-link { position: absolute; top: -40px; left: 8px; background: #000; color: #fff; padding: 8px 12px; z-index: 9999; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { top: 8px; }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
   
   <!-- Navbar -->
   <header class="fixed top-0 left-0 right-0 z-50">
@@ -468,8 +527,8 @@
       <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="/" class="flex-shrink-0">
-          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
-               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+          <img src="/images/logo-puppy-toy.webp" 
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
         </a>
         
         <!-- Desktop Menu -->
@@ -484,20 +543,20 @@
         <!-- Cart -->
         <div class="hidden lg:flex items-center">
           <a href="/cachorros.html" class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
-            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white" aria-hidden="true"></i>
           </a>
         </div>
         
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
-          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        <button id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
   </header>
   
   <!-- Barra Ticker Ultra -->
-  <div class="ticker-bar" id="tickerBar" style="margin-top: 112px;">
+  <div id="main" class="ticker-bar" id="tickerBar" style="margin-top: 112px;">
     <div class="paw-field" id="pawField"></div>
     <div class="ticker-track-wrapper">
       <div class="ticker-track">
@@ -557,7 +616,7 @@
         
         <div class="rounded-lg overflow-hidden min-h-[300px]">
           <iframe src="https://player.vimeo.com/video/1145848703?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full min-h-[300px] border-0" allow="autoplay"></iframe>
+                  class="w-full h-full min-h-[300px] border-0" allow="autoplay" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -576,7 +635,7 @@
         <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
           <div class="overflow-hidden">
             <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/1-1300x588.webp" 
-                 alt="Mini Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Mini Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </div>
           <div class="text-center py-4">
             <h3 class="text-xl font-semibold text-gray-800 uppercase">MINI TOY</h3>
@@ -587,7 +646,7 @@
         <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
           <div class="overflow-hidden">
             <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/2-1300x599.webp" 
-                 alt="Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Toy" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </div>
           <div class="text-center py-4">
             <h3 class="text-xl font-semibold text-gray-800 uppercase">TOY</h3>
@@ -598,7 +657,7 @@
         <a href="/cachorros.html" class="category-card block bg-white rounded-xl overflow-hidden shadow-md">
           <div class="overflow-hidden">
             <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/3-1300x571.webp" 
-                 alt="Enano" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Enano" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </div>
           <div class="text-center py-4">
             <h3 class="text-xl font-semibold text-gray-800 uppercase">ENANO</h3>
@@ -621,7 +680,7 @@
         <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-toy-negro-new.png" 
-                 alt="Poodle Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY NEGRO</h3>
@@ -635,7 +694,7 @@
         <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-mini-toy-negro-new.png" 
-                 alt="Poodle Mini Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Mini Toy Negro" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE MINI TOY NEGRO</h3>
@@ -649,7 +708,7 @@
         <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-toy-beige-new.png" 
-                 alt="Poodle Toy Beige" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Toy Beige" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY BEIGE</h3>
@@ -663,7 +722,7 @@
         <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-mini-toy-rojo-new.png" 
-                 alt="Poodle Mini Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Mini Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE MINI TOY ROJO</h3>
@@ -677,7 +736,7 @@
         <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-toy-marron-chocolate-new.png" 
-                 alt="Poodle Toy Marron Chocolate" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Toy Marron Chocolate" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY MARRON CHOCOLATE</h3>
@@ -692,7 +751,7 @@
           <span class="absolute top-2 left-2 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-lg z-10">-10%</span>
           <a href="/cachorros.html" class="block overflow-hidden">
             <img src="images/poodle-toy-rojo-new.png" 
-                 alt="Poodle Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300">
+                 alt="Poodle Toy Rojo" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
           </a>
           <div class="text-center p-4">
             <h3 class="font-semibold text-gray-800 mb-1">POODLE TOY ROJO</h3>
@@ -724,7 +783,7 @@
         </div>
         <div class="rounded-2xl overflow-hidden min-h-[300px]">
           <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full min-h-[300px] border-0" allow="autoplay"></iframe>
+                  class="w-full h-full min-h-[300px] border-0" allow="autoplay" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -739,19 +798,19 @@
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
             <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1"
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
           </div>
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
             <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
           </div>
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
             <iframe src="https://player.vimeo.com/video/1155224730?background=1&autoplay=1&loop=1&muted=1" 
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -859,7 +918,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>¿Cómo Adquiero a mi cachorro?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Puedes contactarnos directamente por WhatsApp al +51 920 688 338 o visitar nuestra página de cachorros. Te brindaremos toda la información sobre disponibilidad, precios y el proceso de adopción.
@@ -869,7 +928,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>¿Realizan envíos nacionales?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Sí, realizamos envíos a todo el Perú mediante empresas de transporte confiables que garantizan la seguridad y bienestar de tu cachorro durante el traslado.
@@ -879,7 +938,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Compromiso: Garantía y Trasparencia</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Todos nuestros cachorros cuentan con garantía de salud, certificado de vacunación y la opción de pedigree. Brindamos videos de comprobación desde el país de origen hasta la entrega en Perú.
@@ -889,7 +948,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Traslado del cachorro a Perú</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Los cachorros importados vienen de países vecinos como Bolivia, Argentina y Brasil. El tiempo estimado de llegada es de aproximadamente 2 semanas. También contamos con cachorros nacionales para entrega inmediata.
@@ -899,7 +958,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Estafas comunes</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Desconfía de precios muy bajos, vendedores que no permiten videollamadas, o que piden pagos completos por adelantado sin garantías. Nosotros siempre brindamos videos en vivo y documentación verificable.
@@ -909,7 +968,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Nombre de empresa</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Somos Puppy Toy Perú, criadores especializados en Caniche/Poodle con más de 10 años de experiencia. Nuestra oficina está ubicada en Los Olivos, Lima.
@@ -919,7 +978,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Alergia - Hipoalergénico</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Los Caniche/Poodle son considerados hipoalergénicos porque no sueltan tanto pelo como otras razas. Son ideales para personas con alergias leves a perros.
@@ -929,7 +988,7 @@
         <details class="bg-white rounded-lg overflow-hidden">
           <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-gray-800">
             <span>Características de un Caniche</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 chevron" aria-hidden="true"></i>
           </summary>
           <div class="px-4 pb-4 text-gray-600">
             Los Caniche son inteligentes, leales, juguetones y fáciles de entrenar. Son excelentes compañeros familiares y se adaptan bien a la vida en apartamentos.
@@ -1000,8 +1059,8 @@
     <div class="max-w-6xl mx-auto">
       <!-- Logo -->
       <div class="text-center mb-8">
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
-             alt="Puppy Toy Perú" class="h-16 mx-auto">
+        <img src="/images/logo-puppy-toy.webp" 
+             alt="Puppy Toy Perú" class="h-16 mx-auto" width="180" height="56" fetchpriority="high" decoding="async">
       </div>
       
       <!-- Links -->
@@ -1067,7 +1126,7 @@
     <span class="wa-float__btn">
       <span class="wa-float__icon">
         <span class="wa-float__icon-glow"></span>
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;">
+        <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" width="180" height="56" fetchpriority="high" decoding="async">
       </span>
       <span class="wa-float__text">
         <span class="wa-float__label">WhatsApp directo</span>
@@ -1084,7 +1143,7 @@
         <div class="flex justify-between items-center mb-8">
           <h3 class="text-xl font-bold">Menú</h3>
           <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full">
-            <i data-lucide="x" class="w-6 h-6"></i>
+            <i data-lucide="x" class="w-6 h-6" aria-hidden="true"></i>
           </button>
         </div>
         <nav class="space-y-4">
@@ -1105,31 +1164,32 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      setTimeout(() => {
-        mobileMenuPanel.classList.remove('translate-x-full');
-      }, 10);
-    });
-    
-    function closeMobileMenu() {
-      mobileMenuPanel.classList.add('translate-x-full');
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
+    let lastFocused = null;
+    function trapFocus(e){
+      if(e.key !== 'Tab') return;
+      const focusables = mobileMenuPanel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+      if(!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
     }
-    
-    // Auto-redirect to WhatsApp on first visit
-    (function() {
-      const hasVisited = sessionStorage.getItem('whatsappRedirect');
-      if (!hasVisited) {
-        sessionStorage.setItem('whatsappRedirect', 'true');
-        setTimeout(() => {
-          window.open('https://wa.me/51920688338', '_blank');
-        }, 3000);
-      }
-    })();
+    function openMobileMenu(){
+      lastFocused = document.activeElement;
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+      setTimeout(()=>{ mobileMenuPanel.classList.remove('translate-x-full'); const f = mobileMenuPanel.querySelector('a,button'); f && f.focus(); }, 10);
+      document.addEventListener('keydown', onKeyDown);
+    }
+    function closeMobileMenu(){
+      mobileMenuPanel.classList.add('translate-x-full');
+      mobileMenuBtn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+      setTimeout(()=>{ mobileMenu.classList.add('hidden'); lastFocused && lastFocused.focus(); }, 300);
+      document.removeEventListener('keydown', onKeyDown);
+    }
+    function onKeyDown(e){ if(e.key === 'Escape') closeMobileMenu(); else trapFocus(e); }
+    if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click', openMobileMenu); }
     
     // === Generar huellitas flotantes ===
     const pawField = document.getElementById('pawField');

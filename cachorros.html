@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cachorros - Puppy Toy Perú</title>
-  <meta name="description" content="Todos nuestros cachorros Caniche/Poodle disponibles. Mini Toy, Toy y Enano con garantía y certificado.">
+  <title>Cachorros Poodle Toy, Mini Toy y Enano en Lima | Puppy Toy Perú</title>
+  <meta name="description" content="Cachorros Caniche/Poodle disponibles en Lima, Perú: Mini Toy, Toy y Enano. Pedigree, vacunados, microchip y garantía de salud. Entrega segura. ¡Reserva el tuyo!">
+  <link rel="canonical" href="https://puppytoyperuoficial.com/cachorros.html">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -13,18 +14,19 @@
 
   <!-- Open Graph / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://puppytoyperuoficial.com/">
-  <meta property="og:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta property="og:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia. Cachorros con pedigree, vacunados y con garantia de salud.">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:url" content="https://puppytoyperuoficial.com/cachorros.html">
+  <meta property="og:title" content="Cachorros Poodle Toy, Mini Toy y Enano en Lima | Puppy Toy Perú">
+  <meta property="og:description" content="Cachorros Caniche/Poodle disponibles: Mini Toy, Toy y Enano. Pedigree, vacunados, microchip y garantía de salud.">
   <meta property="og:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta property="og:site_name" content="Puppy Toy Peru">
+  <meta property="og:image:width" content="1500">
+  <meta property="og:image:height" content="844">
+  <meta property="og:site_name" content="Puppy Toy Perú">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta name="twitter:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia.">
+  <meta name="twitter:title" content="Cachorros Poodle Toy, Mini Toy y Enano en Lima | Puppy Toy Perú">
+  <meta name="twitter:description" content="Cachorros Caniche/Poodle Mini Toy, Toy y Enano con pedigree, vacunados y garantía.">
   <meta name="twitter:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
 
   <!-- Tailwind CSS -->
@@ -44,8 +46,24 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  
+  <!-- Preconnect a CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://puppytoyperuoficial.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Cachorros", "item": "https://puppytoyperuoficial.com/cachorros.html"}
+    ]
+  }
+  </script>
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.294.0"></script>
+  <script src="https://unpkg.com/lucide@0.294.0" defer></script>
   
   <style>
     * { font-family: 'Inter', sans-serif; }
@@ -153,9 +171,19 @@
       .wa-float__ring { border-radius: 50%; inset: -4px; }
       .wa-float__aura { border-radius: 50%; inset: -14px; }
     }
+
+    /* Accesibilidad: respeta prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .ticker-track, .paw, .wa-float__btn, .wa-float__aura, .wa-float__ring, .wa-float__icon-glow, .cta-dot::after, .cta-number-area::after, .ticker-bar::before, .ticker-center::before { animation: none !important; }
+    }
+    /* Skip link a11y */
+    .skip-link { position: absolute; top: -40px; left: 8px; background: #000; color: #fff; padding: 8px 12px; z-index: 9999; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { top: 8px; }
   </style>
 </head>
 <body class="bg-white">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
   
   <!-- Navbar -->
   <header class="fixed top-0 left-0 right-0 z-50">
@@ -164,7 +192,7 @@
       <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
         <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
         <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
-          <i data-lucide="phone" class="w-4 h-4"></i>
+          <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
           +51 920 688 338
         </a>
       </div>
@@ -175,8 +203,8 @@
       <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="/" class="flex-shrink-0">
-          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp"
-               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+          <img src="/images/logo-puppy-toy.webp"
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
         </a>
         
         <!-- Desktop Menu -->
@@ -191,27 +219,27 @@
         <!-- Cart -->
         <div class="hidden lg:flex items-center">
           <button class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
-            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white" aria-hidden="true"></i>
           </button>
         </div>
         
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
-          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        <button id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
   </header>
   
   <!-- Spacer for fixed header -->
-  <div class="h-28"></div>
+  <div id="main" class="h-28"></div>
   
   <!-- Breadcrumb -->
   <div class="w-full bg-gray-50 py-4 px-4">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center gap-2 text-sm text-gray-600">
         <a href="/" class="hover:text-primary">Inicio</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <i data-lucide="chevron-right" class="w-4 h-4" aria-hidden="true"></i>
         <span class="text-primary font-medium">Cachorros</span>
       </div>
     </div>
@@ -227,7 +255,7 @@
           <!-- Categories Widget -->
           <div class="bg-white rounded-xl shadow p-6 mb-6">
             <h3 class="text-lg font-bold uppercase mb-4 flex items-center gap-2">
-              <i data-lucide="grid-3x3" class="w-5 h-5 text-primary"></i>
+              <i data-lucide="grid-3x3" class="w-5 h-5 text-primary" aria-hidden="true"></i>
               Categorías
             </h3>
             <ul class="space-y-2">
@@ -261,7 +289,7 @@
           <!-- Price Filter -->
           <div class="bg-white rounded-xl shadow p-6">
             <h3 class="text-lg font-bold uppercase mb-4 flex items-center gap-2">
-              <i data-lucide="sliders-horizontal" class="w-5 h-5 text-primary"></i>
+              <i data-lucide="sliders-horizontal" class="w-5 h-5 text-primary" aria-hidden="true"></i>
               Filtros
             </h3>
             <div class="space-y-3">
@@ -281,7 +309,7 @@
         <div class="flex-1">
           <!-- Header -->
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h1 class="text-2xl md:text-3xl font-bold uppercase">Tienda</h1>
+            <h1 class="text-2xl md:text-3xl font-bold uppercase">Cachorros Caniche / Poodle disponibles</h1>
             <div class="flex items-center gap-4">
               <span class="text-gray-600 text-sm">Mostrando 1-12 de 24 productos</span>
               <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary">
@@ -300,14 +328,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-15_11_11zon-800x800.webp" 
-                     alt="Poodle Toy Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Toy Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE TOY NEGRO</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">TOY</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -317,14 +345,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-1_4_11zon-800x800.webp" 
-                     alt="Poodle Mini Toy Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Mini Toy Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE MINI TOY NEGRO</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">MINI TOY</a>
                 <p class="text-primary font-bold text-xl mt-2">S/3,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -334,14 +362,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-11_5_11zon-800x800.webp" 
-                     alt="Poodle Toy Beige" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Toy Beige" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE TOY BEIGE</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">TOY</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -351,14 +379,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-5_8_11zon-800x800.webp" 
-                     alt="Poodle Mini Toy Rojo" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Mini Toy Rojo" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE MINI TOY ROJO</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">MINI TOY</a>
                 <p class="text-primary font-bold text-xl mt-2">S/4,900.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -368,14 +396,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-14_3_11zon-800x800.webp" 
-                     alt="Poodle Toy Marron Chocolate" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Toy Marron Chocolate" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE TOY MARRON CHOCOLATE</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">TOY</a>
                 <p class="text-primary font-bold text-xl mt-2">S/4,000.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -386,7 +414,7 @@
               <span class="absolute top-3 left-3 bg-[#16A1CC] text-white text-xs font-bold px-3 py-1 rounded-lg z-10">-10%</span>
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/puppy-wb_11zon-800x800.webp" 
-                     alt="Poodle Toy Rojo" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Toy Rojo" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE TOY ROJO</a></h3>
@@ -396,7 +424,7 @@
                   S/4,500.00
                 </p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -406,14 +434,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-15_11_11zon-800x800.webp" 
-                     alt="Poodle Enano Apricot" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Apricot" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO APRICOT</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/3,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -423,14 +451,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-1_4_11zon-800x800.webp" 
-                     alt="Poodle Enano Beige" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Beige" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO BEIGE</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -440,14 +468,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-11_5_11zon-800x800.webp" 
-                     alt="Poodle Enano Blanco" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Blanco" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO BLANCO</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -457,14 +485,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-5_8_11zon-800x800.webp" 
-                     alt="Poodle Enano Exotico" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Exotico" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO EXÓTICO O MERLE</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,000.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -474,14 +502,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/ptp-fotos-prod-14_3_11zon-800x800.webp" 
-                     alt="Poodle Enano Marron" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Marron" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO MARRON</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/4,000.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -491,14 +519,14 @@
             <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-all group">
               <a href="#" class="block overflow-hidden relative">
                 <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/puppy-wb_11zon-800x800.webp" 
-                     alt="Poodle Enano Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                     alt="Poodle Enano Negro" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               </a>
               <div class="p-4 text-center">
                 <h3 class="font-semibold text-gray-800 mb-1"><a href="#" class="hover:text-primary">POODLE ENANO NEGRO</a></h3>
                 <a href="#" class="text-sm text-gray-500 hover:text-primary">ENANO</a>
                 <p class="text-primary font-bold text-xl mt-2">S/2,500.00</p>
                 <button class="mt-3 w-full px-4 py-2 bg-[#F9EBE7] text-gray-700 text-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  <i data-lucide="shopping-cart" class="w-4 h-4" aria-hidden="true"></i>
                   Añadir al carrito
                 </button>
               </div>
@@ -509,12 +537,12 @@
           <!-- Pagination -->
           <div class="flex justify-center items-center gap-2 mt-10">
             <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
-              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+              <i data-lucide="chevron-left" class="w-5 h-5" aria-hidden="true"></i>
             </button>
             <button class="w-10 h-10 rounded-full bg-primary text-white font-bold">1</button>
             <button class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all">2</button>
             <button class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all">
-              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              <i data-lucide="chevron-right" class="w-5 h-5" aria-hidden="true"></i>
             </button>
           </div>
           
@@ -536,7 +564,7 @@
         </div>
         <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
           <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="International Puppies"></iframe>
+                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="International Puppies" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -548,28 +576,28 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
           <div class="flex justify-center mb-4">
-            <i data-lucide="truck" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="truck" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Entrega a Domicilio</h3>
           <p class="text-gray-600 text-sm">Recibe a tu caniche en la puerta de tu hogar, con total seguridad y cariño.</p>
         </div>
         <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
           <div class="flex justify-center mb-4">
-            <i data-lucide="gift" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="gift" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Regalo Especial</h3>
           <p class="text-gray-600 text-sm">Sorprende a quien más quieres con un tierno caniche lleno de amor.</p>
         </div>
         <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
           <div class="flex justify-center mb-4">
-            <i data-lucide="award" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="award" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Cachorros de Calidad</h3>
           <p class="text-gray-600 text-sm">Caniches con pedigree, vacunados y criados en ambiente familiar</p>
         </div>
         <div class="text-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition-all">
           <div class="flex justify-center mb-4">
-            <i data-lucide="shield-check" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="shield-check" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Compra con Confianza</h3>
           <p class="text-gray-600 text-sm">Atención personalizada y asesoría antes y después de la compra.</p>
@@ -582,8 +610,8 @@
   <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-8">
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
-             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain">
+        <img src="/images/logo-puppy-toy.webp" 
+             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
       </div>
       <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
         <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visítanos</a>
@@ -596,21 +624,21 @@
       </div>
       <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
         <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="mail" class="w-5 h-5"></i>
+          <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
           contacto@puppytoy.com
         </a>
         <a href="tel:+51920688338" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="phone" class="w-5 h-5"></i>
+          <i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i>
           +51 920 688 338
         </a>
         <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="instagram" class="w-5 h-5"></i>
+          <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
           @puppytoyperu
         </a>
       </div>
       <div class="text-center mb-6">
         <p class="text-gray-600 flex items-center justify-center gap-2">
-          <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+          <i data-lucide="map-pin" class="w-5 h-5 text-primary" aria-hidden="true"></i>
           LIMA, PERÚ - Oficina Presencial – Los Olivos
         </p>
       </div>
@@ -635,7 +663,7 @@
         <div class="flex justify-between items-center mb-8">
           <h3 class="text-xl font-bold">Menú</h3>
           <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Cerrar menú">
-            <i data-lucide="x" class="w-6 h-6"></i>
+            <i data-lucide="x" class="w-6 h-6" aria-hidden="true"></i>
           </button>
         </div>
         <nav class="space-y-3">
@@ -654,16 +682,32 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => mobileMenuPanel.classList.remove('translate-x-full'), 10);
-      });
+    let lastFocused = null;
+    function trapFocus(e){
+      if(e.key !== 'Tab') return;
+      const focusables = mobileMenuPanel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+      if(!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
     }
-    function closeMobileMenu() {
+    function openMobileMenu(){
+      lastFocused = document.activeElement;
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+      setTimeout(()=>{ mobileMenuPanel.classList.remove('translate-x-full'); const f = mobileMenuPanel.querySelector('a,button'); f && f.focus(); }, 10);
+      document.addEventListener('keydown', onKeyDown);
+    }
+    function closeMobileMenu(){
       mobileMenuPanel.classList.add('translate-x-full');
-      setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+      mobileMenuBtn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+      setTimeout(()=>{ mobileMenu.classList.add('hidden'); lastFocused && lastFocused.focus(); }, 300);
+      document.removeEventListener('keydown', onKeyDown);
     }
+    function onKeyDown(e){ if(e.key === 'Escape') closeMobileMenu(); else trapFocus(e); }
+    if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click', openMobileMenu); }
   </script>
   <!-- WhatsApp Float Button - Mario Style -->
   <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
@@ -674,7 +718,7 @@
     <span class="wa-float__btn">
       <span class="wa-float__icon">
         <span class="wa-float__icon-glow"></span>
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'">
+        <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'" width="180" height="56" fetchpriority="high" decoding="async">
       </span>
       <span class="wa-float__text">
         <span class="wa-float__label">WhatsApp directo</span>

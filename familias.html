@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Familia - PUPPY TOY PERÚ</title>
-  <meta name="description" content="Familias que han adoptado nuestros cachorros Caniche/Poodle. Conoce las historias de nuestros clientes satisfechos.">
+  <title>Familias Felices con sus Poodle | Puppy Toy Perú</title>
+  <meta name="description" content="+500 familias en Perú felices con su cachorro Caniche/Poodle. Mira los videos y testimonios de nuestros clientes en Lima y todo el país.">
+  <link rel="canonical" href="https://puppytoyperuoficial.com/familias.html">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -13,18 +14,19 @@
 
   <!-- Open Graph / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://puppytoyperuoficial.com/">
-  <meta property="og:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta property="og:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia. Cachorros con pedigree, vacunados y con garantia de salud.">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:url" content="https://puppytoyperuoficial.com/familias.html">
+  <meta property="og:title" content="Familias Felices con sus Poodle | Puppy Toy Perú">
+  <meta property="og:description" content="+500 familias en Perú felices con su Caniche/Poodle. Mira los testimonios de nuestros clientes.">
   <meta property="og:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta property="og:site_name" content="Puppy Toy Peru">
+  <meta property="og:image:width" content="1500">
+  <meta property="og:image:height" content="844">
+  <meta property="og:site_name" content="Puppy Toy Perú">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta name="twitter:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia.">
+  <meta name="twitter:title" content="Familias Felices con sus Poodle | Puppy Toy Perú">
+  <meta name="twitter:description" content="+500 familias felices con su Caniche/Poodle. Testimonios reales.">
   <meta name="twitter:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
 
   <!-- Tailwind CSS -->
@@ -44,8 +46,24 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  
+  <!-- Preconnect a CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://puppytoyperuoficial.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Familias", "item": "https://puppytoyperuoficial.com/familias.html"}
+    ]
+  }
+  </script>
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.294.0"></script>
+  <script src="https://unpkg.com/lucide@0.294.0" defer></script>
   
   <style>
     * { font-family: 'Inter', sans-serif; }
@@ -225,9 +243,19 @@
     .cert-card:hover {
       transform: translateY(-5px);
     }
+
+    /* Accesibilidad: respeta prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .ticker-track, .paw, .wa-float__btn, .wa-float__aura, .wa-float__ring, .wa-float__icon-glow, .cta-dot::after, .cta-number-area::after, .ticker-bar::before, .ticker-center::before { animation: none !important; }
+    }
+    /* Skip link a11y */
+    .skip-link { position: absolute; top: -40px; left: 8px; background: #000; color: #fff; padding: 8px 12px; z-index: 9999; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { top: 8px; }
   </style>
 </head>
 <body class="bg-white">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
   
   <!-- Navbar -->
   <header class="fixed top-0 left-0 right-0 z-50">
@@ -249,8 +277,8 @@
       <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="/" class="flex-shrink-0">
-          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp"
-               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+          <img src="/images/logo-puppy-toy.webp"
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
         </a>
         
         <!-- Desktop Menu -->
@@ -265,20 +293,20 @@
         <!-- Cart -->
         <div class="hidden lg:flex items-center">
           <a href="/cachorros.html" class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
-            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white" aria-hidden="true"></i>
           </a>
         </div>
         
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
-          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        <button id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
   </header>
   
   <!-- Spacer for fixed header -->
-  <div class="h-28"></div>
+  <div id="main" class="h-28"></div>
   
   <!-- Hero Section with Video -->
   <section class="w-full flex flex-col items-center justify-center pt-12 pb-8 px-4">
@@ -288,7 +316,7 @@
       <div class="relative rounded-3xl overflow-hidden" style="padding-top: 56.25%;">
         <iframe src="https://player.vimeo.com/video/1145848703?transparent=0&loop=1&controls=0&autoplay=1&color=rgb(202,60,24)&muted=1" 
                 class="absolute inset-0 w-full h-full bg-black"
-                frameborder="0" allow="autoplay; fullscreen" title="Familias Puppy Toy"></iframe>
+                frameborder="0" allow="autoplay; fullscreen" title="Familias Puppy Toy" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -352,7 +380,7 @@
             <div class="relative bg-black" style="padding-top: 177.78%;">
               <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
                       class="absolute inset-0 w-full h-full"
-                      frameborder="0" allow="autoplay" title="Video 2"></iframe>
+                      frameborder="0" allow="autoplay" title="Video de cachorros Puppy Toy Peru" loading="lazy"></iframe>
             </div>
           </div>
           
@@ -361,7 +389,7 @@
             <div class="relative bg-black" style="padding-top: 177.78%;">
               <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
                       class="absolute inset-0 w-full h-full"
-                      frameborder="0" allow="autoplay" title="Video 3"></iframe>
+                      frameborder="0" allow="autoplay" title="Video de cachorros Puppy Toy Peru" loading="lazy"></iframe>
             </div>
           </div>
           
@@ -370,7 +398,7 @@
             <div class="relative bg-black" style="padding-top: 177.78%;">
               <iframe src="https://player.vimeo.com/video/1155224730?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&autopause=0" 
                       class="absolute inset-0 w-full h-full"
-                      frameborder="0" allow="autoplay" title="Video 4"></iframe>
+                      frameborder="0" allow="autoplay" title="Video de cachorros Puppy Toy Peru" loading="lazy"></iframe>
             </div>
           </div>
           
@@ -410,7 +438,7 @@
         <!-- Test Canino -->
         <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
           <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="clipboard-check" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="clipboard-check" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-xl font-bold text-black mb-3">Test Canino</h3>
           <p class="text-gray-600">Evaluación completa de salud y comportamiento para garantizar cachorros sanos y equilibrados.</p>
@@ -419,7 +447,7 @@
         <!-- Pedigree -->
         <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
           <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="award" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="award" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-xl font-bold text-black mb-3">Pedigree</h3>
           <p class="text-gray-600">Documentación certificada de pureza racial y árbol genealógico de cada cachorro.</p>
@@ -428,7 +456,7 @@
         <!-- Microchip -->
         <div class="cert-card bg-gray-50 rounded-3xl p-8 text-center border-2 border-gray-200">
           <div class="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="cpu" class="w-12 h-12 text-primary"></i>
+            <i data-lucide="cpu" class="w-12 h-12 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-xl font-bold text-black mb-3">Microchip</h3>
           <p class="text-gray-600">Identificación permanente con microchip internacional para la seguridad de tu mascota.</p>
@@ -456,7 +484,7 @@
               class="absolute inset-0 w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              title="TikTok Video 1">
+              title="TikTok Video 1" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -469,7 +497,7 @@
               class="absolute inset-0 w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              title="TikTok Video 2">
+              title="TikTok Video 2" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -482,7 +510,7 @@
               class="absolute inset-0 w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              title="TikTok Video 3">
+              title="TikTok Video 3" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -500,7 +528,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Cuánto tiempo de garantía tienen los cachorros?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Todos nuestros cachorros cuentan con 15 días de garantía de salud por enfermedades virales y un año por defectos genéticos hereditarios.</p>
         </details>
@@ -509,7 +537,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Los cachorros vienen vacunados?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Sí, todos nuestros cachorros vienen con su primera dosis de vacuna y desparasitación al día. Entregamos el carnet de vacunación actualizado.</p>
         </details>
@@ -518,7 +546,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Puedo visitar las instalaciones?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">¡Por supuesto! Puedes agendar una visita a nuestras instalaciones en Los Olivos, Lima. Contáctanos al +51 920 688 338 para coordinar.</p>
         </details>
@@ -527,7 +555,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Realizan envíos a provincia?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Sí, realizamos envíos a todo el Perú mediante empresas de transporte confiables. También hacemos envíos internacionales.</p>
         </details>
@@ -536,7 +564,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Qué incluye la compra de un cachorro?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Incluye: cachorro con pedigree, microchip, carnet de vacunación, desparasitación, kit de bienvenida, contrato de compraventa y garantía de salud.</p>
         </details>
@@ -545,7 +573,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Cuál es la diferencia entre Mini Toy, Toy y Enano?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Mini Toy: hasta 2.5 kg adulto. Toy: de 2.5 a 4 kg adulto. Enano: de 4 a 6 kg adulto. Cada categoría tiene características únicas de tamaño y temperamento.</p>
         </details>
@@ -554,7 +582,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Aceptan tarjeta de crédito?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Sí, aceptamos todas las tarjetas de crédito y débito, transferencias bancarias, Yape, Plin y pagos en efectivo.</p>
         </details>
@@ -563,7 +591,7 @@
         <details class="py-4">
           <summary class="flex items-center justify-between text-lg font-medium text-black">
             <span>¿Puedo reservar un cachorro?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 chevron text-primary" aria-hidden="true"></i>
           </summary>
           <p class="mt-3 text-gray-600">Sí, puedes reservar tu cachorro con un adelanto. El monto de la reserva se descuenta del precio total. Contáctanos para más información.</p>
         </details>
@@ -577,25 +605,25 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="truck" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="truck" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h4 class="font-bold text-black">Envíos a Todo el Perú</h4>
         </div>
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="gift" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="gift" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h4 class="font-bold text-black">Kit de Bienvenida</h4>
         </div>
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="shield-check" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="shield-check" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h4 class="font-bold text-black">Garantía de Salud</h4>
         </div>
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-            <i data-lucide="heart-handshake" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="heart-handshake" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h4 class="font-bold text-black">Asesoría Permanente</h4>
         </div>
@@ -609,7 +637,7 @@
     <div class="flex justify-center py-8">
       <a href="/" class="w-32">
         <img src="https://puppytoyperu.com/wp-content/uploads/2025/07/LOGOTIPO-PUPPY-TOY-1.svg" 
-             alt="Puppy Toy Perú" class="w-full h-auto">
+             alt="Puppy Toy Perú" class="w-full h-auto" loading="lazy" decoding="async">
       </a>
     </div>
     
@@ -643,7 +671,7 @@
         <!-- Divider -->
         <div class="flex items-center">
           <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/LINEA-1300x512.webp" 
-               alt="Divider" class="w-80 h-auto">
+               alt="Divider" class="w-80 h-auto" loading="lazy" decoding="async">
         </div>
         
         <!-- Right Column -->
@@ -663,7 +691,7 @@
       <div class="flex items-center gap-5">
         <h2>+51 920 688 338</h2>
         <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/LINEA-1300x512.webp" 
-             alt="Divider" class="w-28 h-auto">
+             alt="Divider" class="w-28 h-auto" loading="lazy" decoding="async">
         <h2>@puppytoyperu</h2>
       </div>
     </div>
@@ -671,7 +699,7 @@
     <!-- Payment Methods -->
     <div class="flex justify-center py-4">
       <img src="https://puppytoyperu.com/wp-content/uploads/2025/11/PAGOS2-1300x135.webp" 
-           alt="Métodos de pago" class="w-72 h-auto">
+           alt="Métodos de pago" class="w-72 h-auto" loading="lazy" decoding="async">
     </div>
     
     <!-- Bottom Bar -->
@@ -702,7 +730,7 @@
     <span class="wa-float__btn">
       <span class="wa-float__icon">
         <span class="wa-float__icon-glow"></span>
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'">
+        <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 24 24%22 fill=%22%23fff%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E'" width="180" height="56" fetchpriority="high" decoding="async">
       </span>
       <span class="wa-float__text">
         <span class="wa-float__label">WhatsApp directo</span>
@@ -719,7 +747,7 @@
         <div class="flex justify-between items-center mb-8">
           <h3 class="text-xl font-bold">Menú</h3>
           <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full">
-            <i data-lucide="x" class="w-6 h-6"></i>
+            <i data-lucide="x" class="w-6 h-6" aria-hidden="true"></i>
           </button>
         </div>
         <nav class="space-y-4">
@@ -740,20 +768,32 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      setTimeout(() => {
-        mobileMenuPanel.classList.remove('translate-x-full');
-      }, 10);
-    });
-    
-    function closeMobileMenu() {
-      mobileMenuPanel.classList.add('translate-x-full');
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
+    let lastFocused = null;
+    function trapFocus(e){
+      if(e.key !== 'Tab') return;
+      const focusables = mobileMenuPanel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+      if(!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
     }
+    function openMobileMenu(){
+      lastFocused = document.activeElement;
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+      setTimeout(()=>{ mobileMenuPanel.classList.remove('translate-x-full'); const f = mobileMenuPanel.querySelector('a,button'); f && f.focus(); }, 10);
+      document.addEventListener('keydown', onKeyDown);
+    }
+    function closeMobileMenu(){
+      mobileMenuPanel.classList.add('translate-x-full');
+      mobileMenuBtn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+      setTimeout(()=>{ mobileMenu.classList.add('hidden'); lastFocused && lastFocused.focus(); }, 300);
+      document.removeEventListener('keydown', onKeyDown);
+    }
+    function onKeyDown(e){ if(e.key === 'Escape') closeMobileMenu(); else trapFocus(e); }
+    if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click', openMobileMenu); }
     
     // Carousel scroll functionality
     const carousel = document.getElementById('video-carousel');
@@ -768,16 +808,6 @@
       carousel.scrollBy({ left: 300, behavior: 'smooth' });
     });
     
-    // Auto-redirect to WhatsApp on first visit
-    (function() {
-      const hasVisited = sessionStorage.getItem('whatsappRedirect');
-      if (!hasVisited) {
-        sessionStorage.setItem('whatsappRedirect', 'true');
-        setTimeout(() => {
-          window.open('https://wa.me/51920688338', '_blank');
-        }, 2000);
-      }
-    })();
   </script>
 </body>
 </html>

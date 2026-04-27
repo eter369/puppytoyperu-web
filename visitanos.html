@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visítanos - Puppy Toy Perú</title>
-  <meta name="description" content="Visita nuestras instalaciones en Los Olivos, Lima. Agenda una cita y conoce a nuestros cachorros Caniche/Poodle en persona.">
+  <title>Visítanos en Los Olivos, Lima | Puppy Toy Perú</title>
+  <meta name="description" content="Visítanos en nuestro criadero en Los Olivos, Lima. Conoce a tu cachorro Caniche/Poodle antes de adoptar. Agenda una cita por WhatsApp +51 920 688 338.">
+  <link rel="canonical" href="https://puppytoyperuoficial.com/visitanos.html">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -13,18 +14,19 @@
 
   <!-- Open Graph / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://puppytoyperuoficial.com/">
-  <meta property="og:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta property="og:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia. Cachorros con pedigree, vacunados y con garantia de salud.">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:url" content="https://puppytoyperuoficial.com/visitanos.html">
+  <meta property="og:title" content="Visítanos en Los Olivos, Lima | Puppy Toy Perú">
+  <meta property="og:description" content="Visítanos en nuestro criadero en Los Olivos, Lima. Conoce a tu cachorro Poodle antes de adoptar.">
   <meta property="og:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta property="og:site_name" content="Puppy Toy Peru">
+  <meta property="og:image:width" content="1500">
+  <meta property="og:image:height" content="844">
+  <meta property="og:site_name" content="Puppy Toy Perú">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PUPPY TOY PERU - Criadores de Caniche/Poodle">
-  <meta name="twitter:description" content="Criadores de Caniche/Poodle en Peru. Mas de 10 anos de experiencia.">
+  <meta name="twitter:title" content="Visítanos en Los Olivos, Lima | Puppy Toy Perú">
+  <meta name="twitter:description" content="Conoce a tu cachorro Poodle en nuestro criadero en Los Olivos, Lima.">
   <meta name="twitter:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
 
   <!-- Tailwind CSS -->
@@ -44,8 +46,24 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  
+  <!-- Preconnect a CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://puppytoyperuoficial.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Visítanos", "item": "https://puppytoyperuoficial.com/visitanos.html"}
+    ]
+  }
+  </script>
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.294.0"></script>
+  <script src="https://unpkg.com/lucide@0.294.0" defer></script>
   
   <style>
     * { font-family: 'Inter', sans-serif; }
@@ -151,9 +169,19 @@
       .wa-float__ring { border-radius: 50%; inset: -4px; }
       .wa-float__aura { border-radius: 50%; inset: -14px; }
     }
+
+    /* Accesibilidad: respeta prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .ticker-track, .paw, .wa-float__btn, .wa-float__aura, .wa-float__ring, .wa-float__icon-glow, .cta-dot::after, .cta-number-area::after, .ticker-bar::before, .ticker-center::before { animation: none !important; }
+    }
+    /* Skip link a11y */
+    .skip-link { position: absolute; top: -40px; left: 8px; background: #000; color: #fff; padding: 8px 12px; z-index: 9999; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { top: 8px; }
   </style>
 </head>
 <body class="bg-white">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
   
   <!-- Navbar -->
   <header class="fixed top-0 left-0 right-0 z-50">
@@ -161,7 +189,7 @@
       <div class="max-w-7xl mx-auto flex justify-center items-center gap-2">
         <span class="text-white text-sm font-medium uppercase tracking-wide">CONTÁCTANOS AL</span>
         <a href="tel:+51920688338" class="flex items-center gap-1 text-white text-sm font-bold hover:underline">
-          <i data-lucide="phone" class="w-4 h-4"></i>
+          <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
           +51 920 688 338
         </a>
       </div>
@@ -170,8 +198,8 @@
     <nav class="w-full bg-white px-4 border-b-[10px] border-primary">
       <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
         <a href="/" class="flex-shrink-0">
-          <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp"
-               alt="Puppy Toy Perú" class="h-14 w-auto object-contain">
+          <img src="/images/logo-puppy-toy.webp"
+               alt="Puppy Toy Perú" class="h-14 w-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
         </a>
         
         <div class="hidden lg:flex items-center gap-3">
@@ -184,25 +212,25 @@
         
         <div class="hidden lg:flex items-center">
           <button class="p-3 rounded-full bg-primary hover:opacity-90 transition-all" aria-label="Carrito">
-            <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-white" aria-hidden="true"></i>
           </button>
         </div>
         
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
-          <i data-lucide="menu" class="w-7 h-7 text-gray-700"></i>
+        <button id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+          <i data-lucide="menu" class="w-7 h-7 text-gray-700" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
   </header>
   
-  <div class="h-28"></div>
+  <div id="main" class="h-28"></div>
   
   <!-- Breadcrumb -->
   <div class="w-full bg-gray-50 py-4 px-4">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center gap-2 text-sm text-gray-600">
         <a href="/" class="hover:text-primary">Inicio</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <i data-lucide="chevron-right" class="w-4 h-4" aria-hidden="true"></i>
         <span class="text-primary font-medium">Visítanos</span>
       </div>
     </div>
@@ -212,7 +240,7 @@
   <section class="w-full bg-primary py-16 md:py-24 px-4 relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0L37 23L60 30L37 37L30 60L23 37L0 30L23 23L30 0Z\" fill=\"white\"/%3E%3C/svg%3E'); background-size: 60px;"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-3xl md:text-5xl font-bold uppercase text-white mb-4">Visítanos</h1>
+      <h1 class="text-3xl md:text-5xl font-bold uppercase text-white mb-4">Visítanos en Los Olivos, Lima</h1>
       <p class="text-xl text-white/90">¡Envíanos un mensaje! Agenda una cita con nosotros</p>
     </div>
   </section>
@@ -225,29 +253,31 @@
         <!-- Contact Form -->
         <div class="bg-gray-50 rounded-2xl p-8">
           <h2 class="text-2xl font-bold uppercase mb-6">Agenda una cita con nosotros</h2>
-          <form class="space-y-6">
+          <form class="space-y-6" name="contacto" netlify-honeypot="bot-field" data-form>
+            <p class="hidden"><label>No llenar: <input name="bot-field"></label></p>
             <div>
-              <label class="block text-gray-700 font-medium mb-2">Nombre completo</label>
-              <input type="text" placeholder="Tu nombre" 
+              <label for="form-nombre" class="block text-gray-700 font-medium mb-2">Nombre completo <span class="text-primary">*</span></label>
+              <input id="form-nombre" name="nombre" type="text" placeholder="Tu nombre" required aria-required="true" autocomplete="name"
                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
             </div>
             <div>
-              <label class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
-              <input type="email" placeholder="tu@email.com" 
+              <label for="form-email" class="block text-gray-700 font-medium mb-2">Correo electrónico <span class="text-primary">*</span></label>
+              <input id="form-email" name="email" type="email" placeholder="tu@email.com" required aria-required="true" autocomplete="email"
                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
             </div>
             <div>
-              <label class="block text-gray-700 font-medium mb-2">Teléfono</label>
-              <input type="tel" placeholder="+51 999 999 999" 
+              <label for="form-tel" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+              <input id="form-tel" name="telefono" type="tel" placeholder="+51 999 999 999" autocomplete="tel" inputmode="tel"
                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
             </div>
             <div>
-              <label class="block text-gray-700 font-medium mb-2">Mensaje</label>
-              <textarea rows="4" placeholder="¿En qué podemos ayudarte?" 
+              <label for="form-msg" class="block text-gray-700 font-medium mb-2">Mensaje <span class="text-primary">*</span></label>
+              <textarea id="form-msg" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required aria-required="true"
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
             </div>
+            <p id="form-msg-status" role="status" aria-live="polite" class="text-sm text-gray-600"></p>
             <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all flex items-center justify-center gap-2">
-              <i data-lucide="send" class="w-5 h-5"></i>
+              <i data-lucide="send" class="w-5 h-5" aria-hidden="true"></i>
               Enviar mensaje
             </button>
           </form>
@@ -261,7 +291,7 @@
           <div class="space-y-6">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                <i data-lucide="mail" class="w-6 h-6 text-primary" aria-hidden="true"></i>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-800 mb-1">Correo Electrónico</h3>
@@ -271,7 +301,7 @@
             
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                <i data-lucide="map-pin" class="w-6 h-6 text-primary" aria-hidden="true"></i>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-800 mb-1">Dirección</h3>
@@ -281,7 +311,7 @@
             
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                <i data-lucide="phone" class="w-6 h-6 text-primary" aria-hidden="true"></i>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-800 mb-1">Teléfono</h3>
@@ -291,7 +321,7 @@
             
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="clock" class="w-6 h-6 text-primary"></i>
+                <i data-lucide="clock" class="w-6 h-6 text-primary" aria-hidden="true"></i>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-800 mb-1">Horario de atención</h3>
@@ -306,13 +336,13 @@
             <h3 class="font-semibold text-gray-800 mb-4">Síguenos en redes</h3>
             <div class="flex gap-4">
               <a href="https://instagram.com/puppytoyperu" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
-                <i data-lucide="instagram" class="w-6 h-6"></i>
+                <i data-lucide="instagram" class="w-6 h-6" aria-hidden="true"></i>
               </a>
               <a href="https://facebook.com/puppytoyperu" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
-                <i data-lucide="facebook" class="w-6 h-6"></i>
+                <i data-lucide="facebook" class="w-6 h-6" aria-hidden="true"></i>
               </a>
               <a href="https://wa.me/51920688338" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
-                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -351,7 +381,7 @@
         <!-- Info 1 -->
         <div class="bg-gray-50 rounded-xl p-6 text-center">
           <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <i data-lucide="calendar-check" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="calendar-check" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Cita previa</h3>
           <p class="text-gray-600">Para garantizar una atención personalizada, solicitamos agendar una cita previa antes de tu visita.</p>
@@ -360,7 +390,7 @@
         <!-- Info 2 -->
         <div class="bg-gray-50 rounded-xl p-6 text-center">
           <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <i data-lucide="users" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="users" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Acompañantes</h3>
           <p class="text-gray-600">Puedes venir con tu familia. ¡Los niños son bienvenidos! Nuestros cachorros adoran conocer a sus futuras familias.</p>
@@ -369,7 +399,7 @@
         <!-- Info 3 -->
         <div class="bg-gray-50 rounded-xl p-6 text-center">
           <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <i data-lucide="heart" class="w-8 h-8 text-primary"></i>
+            <i data-lucide="heart" class="w-8 h-8 text-primary" aria-hidden="true"></i>
           </div>
           <h3 class="text-lg font-bold uppercase mb-2">Interacción</h3>
           <p class="text-gray-600">Durante tu visita podrás interactuar con los cachorros disponibles y elegir al que más te guste.</p>
@@ -386,7 +416,7 @@
       <h2 class="text-3xl md:text-4xl font-bold uppercase text-white mb-4">¿Prefieres escribirnos?</h2>
       <p class="text-xl text-white/90 mb-8">Contáctanos directamente por WhatsApp para una respuesta más rápida</p>
       <a href="https://wa.me/51920688338" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
         Escribir por WhatsApp
       </a>
     </div>
@@ -396,8 +426,8 @@
   <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-8">
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" 
-             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain">
+        <img src="/images/logo-puppy-toy.webp" 
+             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
       </div>
       <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
         <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visítanos</a>
@@ -410,21 +440,21 @@
       </div>
       <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
         <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="mail" class="w-5 h-5"></i>
+          <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
           contacto@puppytoy.com
         </a>
         <a href="tel:+51920688338" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="phone" class="w-5 h-5"></i>
+          <i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i>
           +51 920 688 338
         </a>
         <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="instagram" class="w-5 h-5"></i>
+          <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
           @puppytoyperu
         </a>
       </div>
       <div class="text-center mb-6">
         <p class="text-gray-600 flex items-center justify-center gap-2">
-          <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+          <i data-lucide="map-pin" class="w-5 h-5 text-primary" aria-hidden="true"></i>
           LIMA, PERÚ - Oficina Presencial – Los Olivos
         </p>
       </div>
@@ -449,7 +479,7 @@
         <div class="flex justify-between items-center mb-8">
           <h3 class="text-xl font-bold">Menú</h3>
           <button onclick="closeMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Cerrar menú">
-            <i data-lucide="x" class="w-6 h-6"></i>
+            <i data-lucide="x" class="w-6 h-6" aria-hidden="true"></i>
           </button>
         </div>
         <nav class="space-y-3">
@@ -468,15 +498,53 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => mobileMenuPanel.classList.remove('translate-x-full'), 10);
-      });
+    let lastFocused = null;
+    function trapFocus(e){
+      if(e.key !== 'Tab') return;
+      const focusables = mobileMenuPanel.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+      if(!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
     }
-    function closeMobileMenu() {
+    function openMobileMenu(){
+      lastFocused = document.activeElement;
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+      setTimeout(()=>{ mobileMenuPanel.classList.remove('translate-x-full'); const f = mobileMenuPanel.querySelector('a,button'); f && f.focus(); }, 10);
+      document.addEventListener('keydown', onKeyDown);
+    }
+    function closeMobileMenu(){
       mobileMenuPanel.classList.add('translate-x-full');
-      setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+      mobileMenuBtn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+      setTimeout(()=>{ mobileMenu.classList.add('hidden'); lastFocused && lastFocused.focus(); }, 300);
+      document.removeEventListener('keydown', onKeyDown);
+    }
+    function onKeyDown(e){ if(e.key === 'Escape') closeMobileMenu(); else trapFocus(e); }
+    if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click', openMobileMenu); }
+
+    // Form submit -> WhatsApp prefilled (since no backend)
+    const form = document.querySelector('form[data-form]');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        if (form.querySelector('[name="bot-field"]').value) return;
+        const nombre = form.nombre.value.trim();
+        const email = form.email.value.trim();
+        const tel = form.telefono.value.trim();
+        const msg = form.mensaje.value.trim();
+        const status = document.getElementById('form-msg-status');
+        if (!nombre || !email || !msg) { status.textContent = 'Por favor completa los campos requeridos.'; status.className = 'text-sm text-red-600'; return; }
+        const text = `Hola Puppy Toy, soy ${nombre}.%0A` +
+          `Email: ${encodeURIComponent(email)}%0A` +
+          (tel ? `Tel: ${encodeURIComponent(tel)}%0A` : '') +
+          `%0AMensaje: ${encodeURIComponent(msg)}`;
+        status.textContent = 'Abriendo WhatsApp...';
+        status.className = 'text-sm text-green-700';
+        window.open(`https://wa.me/51920688338?text=${text}`, '_blank', 'noopener');
+      });
     }
   </script>
   <!-- WhatsApp Float Button - Mario Style -->
@@ -488,7 +556,7 @@
     <span class="wa-float__btn">
       <span class="wa-float__icon">
         <span class="wa-float__icon-glow"></span>
-        <img src="https://puppytoyperu.com/wp-content/uploads/2025/08/LOGOTIPO-PUPPY-TOY-1.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;">
+        <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy" style="object-fit: contain; padding: 2px; background: white;" width="180" height="56" fetchpriority="high" decoding="async">
       </span>
       <span class="wa-float__text">
         <span class="wa-float__label">WhatsApp directo</span>
