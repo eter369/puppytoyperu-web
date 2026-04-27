@@ -1,4 +1,4 @@
-himport React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const VideosSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -6,7 +6,7 @@ const VideosSection = () => {
 
   // Video IDs for carousel (repeating pattern for 9 cards)
   const videoIds = [
-    1158025487, 1158016645, 1155224730,h
+    1158025487, 1158016645, 1155224730,
     1158025487, 1158016645, 1155224730,
     1158025487, 1158016645, 1155224730
   ];

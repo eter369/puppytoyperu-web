@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="/dist/styles.css">
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   
   <!-- Preconnect a CDNs -->
@@ -55,7 +55,7 @@
   <script src="https://unpkg.com/lucide@0.294.0"></script>
   
   <style>
-    * { font-family: 'Inter', sans-serif; }
+    * { font-family: 'Jost', sans-serif; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -176,7 +176,7 @@
     .lite-vimeo > .lite-vimeo-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(0,0,0,0.7); border-radius: 14%; transition: background-color 0.2s; pointer-events: none; }
     .lite-vimeo:hover > .lite-vimeo-play { background-color: #00adef; }
     .lite-vimeo > .lite-vimeo-play::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent #fff; }
-    .lite-vimeo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .lite-vimeo iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%; border: 0; display: block; }
     .lite-vimeo[data-loaded="true"] > .lite-vimeo-play { display: none; }
     .lite-vimeo[data-loaded="true"]::before { display: none; }
   </style>
@@ -561,7 +561,7 @@
             Entregas de nuestros cachorros con sus nuevas familias.
           </p>
         </div>
-        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+        <div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
           <div class="lite-vimeo" data-vimeo-id="1145848655" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="International Puppies" style="background-image:url('https://vumbnail.com/1145848655.jpg')" role="button" tabindex="0" aria-label="Reproducir video: International Puppies"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
@@ -604,49 +604,84 @@
     </div>
   </section>
   
-  <!-- Footer -->
-  <footer class="w-full bg-[#F7F7F7] pt-12 pb-6 px-4">
+  <!-- Footer (Premium) -->
+  <footer class="relative w-full pt-16 pb-8 px-4 overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #F7F1EC 100%);">
+    <div class="absolute top-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #C83B15 30%, #D4A574 50%, #C83B15 70%, transparent 100%);"></div>
+
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-8">
-        <img src="/images/logo-puppy-toy.webp" 
-             alt="Puppy Toy Perú" class="h-16 w-auto mx-auto object-contain" width="180" height="56" fetchpriority="high" decoding="async">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10">
+        <div class="text-center md:text-left">
+          <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy Perú" class="h-16 w-auto mx-auto md:mx-0 mb-4 object-contain" width="180" height="56" loading="lazy" decoding="async">
+          <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">Criadores de Caniche/Poodle en Perú. Más de 10 años entregando cachorros con pedigree, vacunados y con garantía de salud.</p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Navegación</h3>
+          <ul class="space-y-2.5">
+            <li><a href="/" class="text-gray-600 hover:text-primary transition-colors text-sm">Inicio</a></li>
+            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Cachorros</a></li>
+            <li><a href="/familias.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Familias</a></li>
+            <li><a href="/informacion.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Información</a></li>
+            <li><a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Visítanos</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Categorías</h3>
+          <ul class="space-y-2.5">
+            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Mini Toy</a></li>
+            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Toy</a></li>
+            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Enano</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Contacto</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="mailto:contacto@puppytoy.com" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
+                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                </span>
+                <span class="break-all">contacto@puppytoy.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+51920688338" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
+                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                +51 920 688 338
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/puppytoyperu" target="_blank" rel="noopener" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
+                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </span>
+                @puppytoyperu
+              </a>
+            </li>
+            <li class="pt-1">
+              <div class="flex items-start justify-center md:justify-start gap-2.5 text-gray-600 text-sm">
+                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span class="leading-snug">Lima, Perú<br><span class="text-gray-500 text-xs">Oficina Presencial · Los Olivos</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
-        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visítanos</a>
-        <a href="/familias.html" class="text-gray-600 hover:text-primary transition-colors">Familia</a>
-        <a href="/informacion.html" class="text-gray-600 hover:text-primary transition-colors">Información</a>
-        <a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors">Visitanos</a>
-        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Mini Toy</a>
-        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Toy</a>
-        <a href="#" class="text-gray-600 hover:text-primary transition-colors">Enano</a>
-      </div>
-      <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
-        <a href="mailto:contacto@puppytoy.com" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
-          contacto@puppytoy.com
-        </a>
-        <a href="tel:+51920688338" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i>
-          +51 920 688 338
-        </a>
-        <a href="https://instagram.com/puppytoyperu" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-          <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
-          @puppytoyperu
-        </a>
-      </div>
-      <div class="text-center mb-6">
-        <p class="text-gray-600 flex items-center justify-center gap-2">
-          <i data-lucide="map-pin" class="w-5 h-5 text-primary" aria-hidden="true"></i>
-          LIMA, PERÚ - Oficina Presencial – Los Olivos
-        </p>
-      </div>
-      <div class="border-t border-gray-200 pt-6 text-center">
-        <p class="text-gray-500 text-sm">
-          Copyright 2025 - Uso exclusivo y todos los derechos reservados legalmente Puppy Toy Perú
-        </p>
-      </div>
-      <div class="text-center mt-4">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-500 hover:text-primary transition-colors text-sm">
+
+      <div class="h-px w-full" style="background: linear-gradient(90deg, transparent, #C83B15 25%, #D4A574 50%, #C83B15 75%, transparent);"></div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 mt-2">
+        <p class="text-gray-500 text-xs md:text-sm text-center md:text-left">© 2026 <span class="font-semibold text-gray-700">Puppy Toy Perú</span> — Todos los derechos reservados.</p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-2 text-xs font-semibold uppercase text-gray-500 hover:text-primary transition-colors group" style="letter-spacing: 0.15em;">
+          <span class="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center group-hover:border-primary transition-colors">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </span>
           Regresar arriba
         </button>
       </div>
@@ -707,9 +742,9 @@
     function onKeyDown(e){ if(e.key === 'Escape') closeMobileMenu(); else trapFocus(e); }
     if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click', openMobileMenu); }
   
-    // Lite Vimeo: build iframe on first click
-        document.querySelectorAll('.lite-vimeo').forEach(el => {
-      const load = () => {
+    // Lite Vimeo: auto-load iframe when card scrolls into view (also loads on click as fallback)
+    (function () {
+      const load = (el) => {
         if (el.dataset.loaded === 'true') return;
         const id = el.dataset.vimeoId;
         const params = el.dataset.vimeoParams || 'autoplay=1&dnt=1';
@@ -721,9 +756,18 @@
         el.appendChild(iframe);
         el.dataset.loaded = 'true';
       };
-      el.addEventListener('click', load, { once: true });
-      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
-    });
+      const els = document.querySelectorAll('.lite-vimeo');
+      const io = 'IntersectionObserver' in window
+        ? new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+          }, { rootMargin: '200px' })
+        : null;
+      els.forEach(el => {
+        if (io) io.observe(el); else load(el);
+        el.addEventListener('click', () => load(el), { once: true });
+        el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(el); } });
+      });
+    })();
 
   </script>
   <!-- WhatsApp Float Button - Mario Style -->
