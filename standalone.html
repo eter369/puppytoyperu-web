@@ -51,6 +51,16 @@
     * { font-family: 'Inter', sans-serif; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Lite Vimeo facade: only load iframe on click */
+    .lite-vimeo { position: relative; cursor: pointer; background-color: #000; background-position: center; background-size: cover; aspect-ratio: 16/9; width: 100%; height: 100%; display: block; }
+    .lite-vimeo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 100%); }
+    .lite-vimeo > .lite-vimeo-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(0,0,0,0.7); border-radius: 14%; transition: background-color 0.2s; pointer-events: none; }
+    .lite-vimeo:hover > .lite-vimeo-play { background-color: #00adef; }
+    .lite-vimeo > .lite-vimeo-play::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent #fff; }
+    .lite-vimeo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .lite-vimeo[data-loaded="true"] > .lite-vimeo-play { display: none; }
+    .lite-vimeo[data-loaded="true"]::before { display: none; }
   </style>
 </head>
 <body class="bg-white">
@@ -130,8 +140,7 @@
         </div>
         
         <div class="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-          <iframe src="https://player.vimeo.com/video/1145848703?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="Puppy Toy Video" loading="lazy"></iframe>
+          <div class="lite-vimeo" data-vimeo-id="1145848703" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Puppy Toy Video" style="background-image:url('https://vumbnail.com/1145848703.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Puppy Toy Video"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
     </div>
@@ -314,8 +323,7 @@
           </p>
         </div>
         <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-          <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" title="International Puppies" loading="lazy"></iframe>
+          <div class="lite-vimeo" data-vimeo-id="1145848655" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="International Puppies" style="background-image:url('https://vumbnail.com/1145848655.jpg')" role="button" tabindex="0" aria-label="Reproducir video: International Puppies"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
     </div>
@@ -330,20 +338,17 @@
         <!-- Video Cards -->
         <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
           <div class="relative pt-[177.78%]">
-            <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1"
-                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 1" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1158025487" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video 1" style="background-image:url('https://vumbnail.com/1158025487.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video 1"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
         <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
           <div class="relative pt-[177.78%]">
-            <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
-                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 3" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1158016645" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video 3" style="background-image:url('https://vumbnail.com/1158016645.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video 3"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
         <div class="flex-shrink-0 w-[280px] bg-white border-[6px] border-primary rounded-2xl overflow-hidden">
           <div class="relative pt-[177.78%]">
-            <iframe src="https://player.vimeo.com/video/1155224730?background=1&autoplay=1&loop=1&muted=1"
-                    class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" title="Video 4" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1155224730" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video 4" style="background-image:url('https://vumbnail.com/1155224730.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video 4"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
       </div>
@@ -634,6 +639,26 @@
       mobileMenuOpen = !mobileMenuOpen;
       // Implement mobile menu toggle logic here
     });
-  </script>
+  
+
+    // Lite Vimeo: build iframe on first click
+        document.querySelectorAll('.lite-vimeo').forEach(el => {
+      const load = () => {
+        if (el.dataset.loaded === 'true') return;
+        const id = el.dataset.vimeoId;
+        const params = el.dataset.vimeoParams || 'autoplay=1&dnt=1';
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://player.vimeo.com/video/' + id + '?' + params;
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = el.dataset.title || 'Video Puppy Toy Peru';
+        el.appendChild(iframe);
+        el.dataset.loaded = 'true';
+      };
+      el.addEventListener('click', load, { once: true });
+      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
+    });
+
+</script>
 </body>
 </html>

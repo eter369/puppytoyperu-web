@@ -1,0 +1,11 @@
+node_modules/
+.vite/
+*.log
+.DS_Store
+.claude/
+favicon-option*.png
+favicon-test.png
+favicon-large.png
+favicon-crop.png
+images/+51_920_688_*.png
+images/borra_la_estrella_*.png

@@ -29,19 +29,8 @@
   <meta name="twitter:description" content="Criadero certificado en Los Olivos, Lima. +10 años criando Poodle Toy, Mini Toy y Enano con pedigree y garantía.">
   <meta name="twitter:image" content="https://puppytoyperuoficial.com/images/og-share.jpg">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { DEFAULT: '#C83B15', dark: '#a03010', light: '#e04a20' },
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="stylesheet" href="/dist/styles.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,9 +40,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://player.vimeo.com">
   <link rel="preconnect" href="https://i.vimeocdn.com">
+  <!-- Preload del poster del hero (LCP) -->
+  <link rel="preload" as="image" href="/images/hero-poster.jpg" fetchpriority="high">
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.294.0" defer></script>
+  <script src="https://unpkg.com/lucide@0.294.0"></script>
 
   <!-- JSON-LD: LocalBusiness + WebSite -->
   <script type="application/ld+json">
@@ -501,6 +492,16 @@
     /* Skip link a11y */
     .skip-link { position: absolute; top: -40px; left: 8px; background: #000; color: #fff; padding: 8px 12px; z-index: 9999; text-decoration: none; border-radius: 4px; }
     .skip-link:focus { top: 8px; }
+
+    /* Lite Vimeo facade: only load iframe on click */
+    .lite-vimeo { position: relative; cursor: pointer; background-color: #000; background-position: center; background-size: cover; aspect-ratio: 16/9; width: 100%; height: 100%; display: block; }
+    .lite-vimeo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 100%); }
+    .lite-vimeo > .lite-vimeo-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(0,0,0,0.7); border-radius: 14%; transition: background-color 0.2s; pointer-events: none; }
+    .lite-vimeo:hover > .lite-vimeo-play { background-color: #00adef; }
+    .lite-vimeo > .lite-vimeo-play::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent #fff; }
+    .lite-vimeo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .lite-vimeo[data-loaded="true"] > .lite-vimeo-play { display: none; }
+    .lite-vimeo[data-loaded="true"]::before { display: none; }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -595,8 +596,8 @@
   
   <!-- Hero Section with Video -->
   <section class="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-      <source src="https://puppytoyperu.com/wp-content/uploads/2025/11/videoiniciopuppytoyperu-1-1-1.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="metadata" poster="/images/hero-poster.jpg" aria-label="Video de cachorros Poodle Puppy Toy Peru" class="absolute inset-0 w-full h-full object-cover">
+      <source src="/videos/hero-puppy-toy.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black/10"></div>
   </section>
@@ -615,8 +616,7 @@
         </div>
         
         <div class="rounded-lg overflow-hidden min-h-[300px]">
-          <iframe src="https://player.vimeo.com/video/1145848703?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full min-h-[300px] border-0" allow="autoplay" loading="lazy"></iframe>
+          <div class="lite-vimeo" data-vimeo-id="1145848703" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1145848703.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
     </div>
@@ -782,8 +782,7 @@
           <p class="text-lg leading-relaxed">Cada cachorro cuenta con un microchip de identificación en el cual nuestro personal brinda el video de comprobación en el país de origen del cachorro a Perú para que su nueva familia verifique su autenticidad junto a sus documento de importación.</p>
         </div>
         <div class="rounded-2xl overflow-hidden min-h-[300px]">
-          <iframe src="https://player.vimeo.com/video/1145848655?muted=1&autoplay=1&loop=1&background=1" 
-                  class="w-full h-full min-h-[300px] border-0" allow="autoplay" loading="lazy"></iframe>
+          <div class="lite-vimeo" data-vimeo-id="1145848655" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1145848655.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
     </div>
@@ -797,20 +796,17 @@
       <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4" id="video-carousel">
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
-            <iframe src="https://player.vimeo.com/video/1158025487?background=1&autoplay=1&loop=1&muted=1"
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1158025487" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1158025487.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
-            <iframe src="https://player.vimeo.com/video/1158016645?background=1&autoplay=1&loop=1&muted=1" 
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1158016645" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1158016645.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
-            <iframe src="https://player.vimeo.com/video/1155224730?background=1&autoplay=1&loop=1&muted=1" 
-                    class="absolute inset-0 w-full h-full border-0" allow="autoplay" loading="lazy"></iframe>
+            <div class="lite-vimeo" data-vimeo-id="1155224730" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1155224730.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
           </div>
         </div>
       </div>
@@ -1207,6 +1203,26 @@
     }
     setInterval(spawnPaw, 900);
     for (let i = 0; i < 6; i++) setTimeout(spawnPaw, i * 300);
-  </script>
+  
+
+    // Lite Vimeo: build iframe on first click
+        document.querySelectorAll('.lite-vimeo').forEach(el => {
+      const load = () => {
+        if (el.dataset.loaded === 'true') return;
+        const id = el.dataset.vimeoId;
+        const params = el.dataset.vimeoParams || 'autoplay=1&dnt=1';
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://player.vimeo.com/video/' + id + '?' + params;
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = el.dataset.title || 'Video Puppy Toy Peru';
+        el.appendChild(iframe);
+        el.dataset.loaded = 'true';
+      };
+      el.addEventListener('click', load, { once: true });
+      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
+    });
+
+</script>
 </body>
 </html>

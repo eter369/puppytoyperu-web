@@ -1,9 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
+    "./*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./*.jsx"
+  ],
+  safelist: [
+    'translate-x-full',
+    'hidden',
+    'flex',
+    'block',
+    { pattern: /^(bg|text|border)-primary(-dark|-light)?$/ }
   ],
   theme: {
     extend: {
