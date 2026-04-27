@@ -53,7 +53,7 @@
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
     /* Lite Vimeo facade: only load iframe on click */
-    .lite-vimeo { position: relative; cursor: pointer; background-color: #000; background-position: center; background-size: cover; aspect-ratio: 16/9; width: 100%; height: 100%; display: block; }
+    .lite-vimeo { position: absolute; inset: 0; cursor: pointer; background-color: #000; background-position: center; background-size: cover; width: 100%; height: 100%; display: block; overflow: hidden; }
     .lite-vimeo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 100%); }
     .lite-vimeo > .lite-vimeo-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(0,0,0,0.7); border-radius: 14%; transition: background-color 0.2s; pointer-events: none; }
     .lite-vimeo:hover > .lite-vimeo-play { background-color: #00adef; }
