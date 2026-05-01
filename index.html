@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="/dist/styles.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Preconnect a CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -643,19 +643,42 @@
   </section>
   
   <!-- Bienvenido Section -->
-  <section class="w-full py-12 md:py-16 lg:py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-center mb-8 md:mb-12 uppercase" style="font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 600;">
-        Bienvenido a la familia de <span class="text-primary">PUPPY TOY PERÚ</span>
-      </h1>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div class="text-center" style="font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; color: #000; font-style: normal;">
-          <p class="mb-6">Somos criadores desde hace más de 10 años dedicados a la conservación de la raza Caniche o conocido como Poodle, esta pasión hacia los animales nos ha llevado a buscar los mejores estándar de dicho ejemplar encontrándolos en criaderos extranjeros, mayormente los traslados de los cachorros son de países vecinos como, Bolivia, Argentina y Brasil, de este modo el tiempo de llegada estimada es de aproximadamente 2 semanas, tambien disponemos de cachorros nacionales para entrega inmediata.</p>
-          <p>En Puppy toy Perú velamos por la salud, crianza y genética de cada ejemplar es por ello que te brindamos nuestro compromiso atreves de nuestro certificado de importación y garantía donde comprobaras la pureza de tu compañero de vida.</p>
+  <section class="w-full px-4" style="padding-top: 80px; padding-bottom: 80px; background: linear-gradient(180deg, #ffffff 0%, #fbf6f1 50%, #ffffff 100%);">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <!-- Title block (mismo sistema tipográfico que "Por qué elegir") -->
+      <header class="text-center" style="margin-bottom: 48px;">
+        <!-- Eyebrow with hairlines -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 18px;">
+          <span style="display: block; height: 1px; width: 32px; background: #d4a574; opacity: 0.6;"></span>
+          <span style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #C83B15;">Bienvenidos</span>
+          <span style="display: block; height: 1px; width: 32px; background: #d4a574; opacity: 0.6;"></span>
         </div>
-        
-        <div class="relative aspect-video rounded-lg overflow-hidden shadow-xl">
+        <!-- Title -->
+        <h1 class="uppercase" style="font-family: 'Jost', sans-serif; font-size: clamp(28px, 4.4vw, 40px); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; color: #1a1a1a; margin: 0 0 18px;">
+          Bienvenido a la familia de <span style="color: #C83B15;">PUPPY TOY PERÚ</span>
+        </h1>
+        <!-- Subtitle -->
+        <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.6; color: #4a4a4a; max-width: 600px; margin: 0 auto 28px;">
+          Conoce nuestra historia y el compromiso detrás de cada uno de nuestros cachorros Caniche.
+        </p>
+        <!-- Divider -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px;">
+          <span style="display: block; height: 1px; width: 56px; background: linear-gradient(90deg, transparent, #d4a574);"></span>
+          <span style="display: block; width: 6px; height: 6px; border-radius: 50%; background: #C83B15; box-shadow: 0 0 0 3px rgba(200,59,21,0.12);"></span>
+          <span style="display: block; height: 1px; width: 56px; background: linear-gradient(90deg, #d4a574, transparent);"></span>
+        </div>
+      </header>
+
+      <!-- Body text (stacked, justified) -->
+      <div style="font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; color: #000; text-align: justify;">
+        <p style="margin: 16px 0;">Somos criadores desde hace más de 10 años dedicados a la conservación de la raza Caniche, también conocida como Poodle. Esta pasión por los animales nos ha llevado a buscar los mejores estándares de la raza en criaderos extranjeros, principalmente Bolivia, Argentina y Brasil — el tiempo de llegada estimado es de aproximadamente 2 semanas. También disponemos de cachorros nacionales para entrega inmediata.</p>
+        <p style="margin: 16px 0;">En Puppy Toy Perú velamos por la salud, crianza y genética de cada ejemplar. Te brindamos nuestro compromiso a través de nuestro certificado de importación y garantía, donde comprobarás la pureza de tu compañero de vida.</p>
+      </div>
+
+      <!-- Video frame below: ambient glow + gold hairline + deep shadow -->
+      <div class="relative" style="margin-top: 40px;">
+        <div class="absolute pointer-events-none" style="inset: -24px; background: radial-gradient(ellipse at center, rgba(212,165,116,0.22), transparent 65%); filter: blur(28px); z-index: 0;"></div>
+        <div class="relative aspect-video overflow-hidden" style="border-radius: 24px; box-shadow: 0 28px 64px -14px rgba(0,0,0,0.25), 0 0 0 1px rgba(212,165,116,0.45); z-index: 1;">
           <div class="lite-vimeo" data-vimeo-id="1145848703" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1145848703.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
         </div>
       </div>
@@ -810,19 +833,25 @@
     </div>
   </section>
   
-  <!-- Cachorros en el Extranjero Section -->
-  <section class="w-full py-16 md:py-20 px-4 relative overflow-hidden" style="background: linear-gradient(135deg, #C83B15 0%, #a03010 100%);">
-    <!-- Star pattern overlay -->
-    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-
-    <div class="max-w-6xl mx-auto relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div class="text-white">
-          <h2 class="text-2xl md:text-3xl font-bold uppercase mb-6">Nuestros cachorros en el extranjero</h2>
-          <p class="text-lg leading-relaxed">Cada cachorro cuenta con un microchip de identificación en el cual nuestro personal brinda el video de comprobación en el país de origen del cachorro a Perú para que su nueva familia verifique su autenticidad junto a sus documento de importación.</p>
-        </div>
-        <div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-          <div class="lite-vimeo" data-vimeo-id="1145848655" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1145848655.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
+  <!-- Cachorros en el Extranjero Section (Premium card) -->
+  <section class="w-full px-4" style="padding-top: 60px; padding-bottom: 60px;">
+    <div style="max-width: 1192px; margin: 0 auto;">
+      <div style="position: relative; border-radius: 44px; overflow: hidden; background-color: #C83B15; background-image: url('https://puppytoyperu.com/wp-content/uploads/2025/09/ESTRELLAS.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; padding: 80px 40px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 28px;">
+          <!-- Title -->
+          <h2 class="uppercase text-center" style="font-family: 'Jost', sans-serif; font-size: 30px; font-weight: 700; line-height: 36px; color: #ffffff; margin: 0;">
+            Nuestros cachorros en el extranjero
+          </h2>
+          <!-- Decorative white line -->
+          <span style="display: block; width: 81%; max-width: 680px; height: 6px; border-top: 6px solid #ffffff;"></span>
+          <!-- Body text -->
+          <p class="text-center" style="font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; color: #ffffff; margin: 0; max-width: 840px;">
+            Cada cachorro cuenta con un microchip de identificación. Nuestro personal entrega el video de comprobación en el país de origen del cachorro hacia Perú, para que su nueva familia verifique la autenticidad junto a la documentación completa de importación.
+          </p>
+          <!-- Video below -->
+          <div style="position: relative; width: 100%; max-width: 1110px; margin-top: 12px; border-radius: 22px; overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 24px 60px -12px rgba(0,0,0,0.35);">
+            <div class="lite-vimeo" data-vimeo-id="1145848655" data-vimeo-params="muted=1&autoplay=1&loop=1&background=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1145848655.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -841,7 +870,19 @@
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
           <div class="relative bg-black" style="padding-top: 177.78%;">
-            <div class="lite-vimeo" data-vimeo-id="1158016645" data-vimeo-params="background=1&autoplay=1&loop=1&muted=1" data-title="Video Puppy Toy Peru" style="background-image:url('https://vumbnail.com/1158016645.jpg')" role="button" tabindex="0" aria-label="Reproducir video: Video Puppy Toy Peru"><div class="lite-vimeo-play" aria-hidden="true"></div></div>
+            <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover" aria-label="Cachorro Caniche en Los Olivos - Puppy Toy Perú">
+              <source src="/videos/los-olivos-cachorro.mp4" type="video/mp4">
+            </video>
+            <!-- Watermark cover -->
+            <div aria-hidden="true" style="position: absolute; bottom: 4px; right: 4px; width: 52px; height: 52px; border-radius: 50%; background: #C83B15; box-shadow: 0 4px 12px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; z-index: 2;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                <circle cx="6" cy="9" r="2"/>
+                <circle cx="10" cy="6" r="2"/>
+                <circle cx="14" cy="6" r="2"/>
+                <circle cx="18" cy="9" r="2"/>
+                <path d="M12 11c-3 0-6 2-6 5 0 2 2 3 4 3 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 4-1 4-3 0-3-3-5-6-5z"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
@@ -1034,149 +1075,719 @@
     </div>
   </section>
   
-  <!-- Features Section -->
-  <section class="w-full py-12 md:py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center p-6">
-          <div class="flex justify-center mb-4 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
-              <path d="M15 18H9"></path>
-              <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
-              <circle cx="17" cy="18" r="2"></circle>
-              <circle cx="7" cy="18" r="2"></circle>
+  <!-- Editorial Atelier Section: Por Qué Elegir -->
+  <section class="atelier-section">
+    <div class="atelier-noise"></div>
+    <div class="atelier-container">
+      <!-- Title block -->
+      <header class="atelier-header">
+        <!-- Eyebrow with hairlines on both sides -->
+        <div class="atelier-eyebrow">
+          <span class="atelier-hairline"></span>
+          <span class="atelier-eyebrow-text">Nuestro Compromiso</span>
+          <span class="atelier-hairline"></span>
+        </div>
+        <!-- Title -->
+        <h2 class="atelier-title">
+          Por qué elegir <span class="atelier-title-accent">Puppy Toy Perú</span>
+        </h2>
+        <!-- Subtitle -->
+        <p class="atelier-subtitle">
+          Más de 10 años criando Caniches con pedigree, vacunados y entregados con la calidez que merecen.
+        </p>
+        <!-- Divider -->
+        <div class="atelier-divider" aria-hidden="true">
+          <span class="atelier-divider-line"></span>
+          <span class="atelier-divider-mark"></span>
+          <span class="atelier-divider-line"></span>
+        </div>
+      </header>
+
+      <!-- 4 Cards -->
+      <div class="atelier-grid">
+        <!-- Card 01: Entrega -->
+        <article class="atelier-card">
+          <span class="atelier-numeral" aria-hidden="true">01</span>
+          <div class="atelier-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 30V14a2 2 0 012-2h18a2 2 0 012 2v16"/>
+              <path d="M26 18h7a2 2 0 011.55.74l4.45 5.5a2 2 0 01.45 1.26V30"/>
+              <path d="M2 30h36"/>
+              <circle cx="12" cy="34" r="3.5"/>
+              <circle cx="34" cy="34" r="3.5"/>
+              <path d="M15.5 34h15"/>
             </svg>
           </div>
-          <h3 class="text-lg font-bold uppercase mb-2">Entrega a Domicilio</h3>
-          <p class="text-gray-600 text-sm">Recibe a tu caniche en la puerta de tu hogar, con total seguridad y cariño.</p>
-        </div>
-        
-        <div class="text-center p-6">
-          <div class="flex justify-center mb-4 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 7v14"></path>
-              <path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
-              <path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path>
-              <rect x="3" y="7" width="18" height="4" rx="1"></rect>
+          <h3 class="atelier-card-title">Entrega a Domicilio</h3>
+          <span class="atelier-card-divider"></span>
+          <p class="atelier-card-desc">Recibe a tu caniche en la puerta de tu hogar, con total seguridad y cariño.</p>
+          <a href="/visitanos.html" class="atelier-card-link">Saber más <span class="atelier-arrow">→</span></a>
+        </article>
+
+        <!-- Card 02: Regalo -->
+        <article class="atelier-card">
+          <span class="atelier-numeral" aria-hidden="true">02</span>
+          <div class="atelier-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="16" width="36" height="8" rx="1"/>
+              <path d="M9 24v18a1 1 0 001 1h28a1 1 0 001-1V24"/>
+              <path d="M24 16v27"/>
+              <path d="M24 16c-3-6-12-6-12-1.5C12 17 18 17 24 16z"/>
+              <path d="M24 16c3-6 12-6 12-1.5C36 17 30 17 24 16z"/>
             </svg>
           </div>
-          <h3 class="text-lg font-bold uppercase mb-2">Regalo Especial</h3>
-          <p class="text-gray-600 text-sm">Sorprende a quien más quieres con un tierno caniche lleno de amor.</p>
-        </div>
-        
-        <div class="text-center p-6">
-          <div class="flex justify-center mb-4 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
-              <circle cx="12" cy="8" r="6"></circle>
+          <h3 class="atelier-card-title">Regalo Especial</h3>
+          <span class="atelier-card-divider"></span>
+          <p class="atelier-card-desc">Sorprende a quien más quieres con un tierno caniche lleno de amor.</p>
+          <a href="/cachorros.html" class="atelier-card-link">Saber más <span class="atelier-arrow">→</span></a>
+        </article>
+
+        <!-- Card 03: Calidad -->
+        <article class="atelier-card">
+          <span class="atelier-numeral" aria-hidden="true">03</span>
+          <div class="atelier-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="24" cy="18" r="11"/>
+              <circle cx="24" cy="18" r="6"/>
+              <path d="M16 27l-4 16 12-7 12 7-4-16"/>
+              <path d="M22 18l1.5 2 3-4"/>
             </svg>
           </div>
-          <h3 class="text-lg font-bold uppercase mb-2">Cachorros de Calidad</h3>
-          <p class="text-gray-600 text-sm">Caniches con pedigree, vacunados y criados en ambiente familiar</p>
-        </div>
-        
-        <div class="text-center p-6">
-          <div class="flex justify-center mb-4 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
-              <path d="m9 12 2 2 4-4"></path>
+          <h3 class="atelier-card-title">Cachorros de Calidad</h3>
+          <span class="atelier-card-divider"></span>
+          <p class="atelier-card-desc">Caniches con pedigree, vacunados y criados en ambiente familiar.</p>
+          <a href="/informacion.html" class="atelier-card-link">Saber más <span class="atelier-arrow">→</span></a>
+        </article>
+
+        <!-- Card 04: Confianza -->
+        <article class="atelier-card">
+          <span class="atelier-numeral" aria-hidden="true">04</span>
+          <div class="atelier-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M24 4l16 6v12c0 11-7.5 18-16 22-8.5-4-16-11-16-22V10l16-6z"/>
+              <path d="M24 18c-1.5-2-4-2-5 0-1 2 0 4 5 7 5-3 6-5 5-7-1-2-3.5-2-5 0z" fill="currentColor" fill-opacity="0.1"/>
             </svg>
           </div>
-          <h3 class="text-lg font-bold uppercase mb-2">Compra con Confianza</h3>
-          <p class="text-gray-600 text-sm">Atención personalizada y asesoría antes y después de la compra.</p>
-        </div>
+          <h3 class="atelier-card-title">Compra con Confianza</h3>
+          <span class="atelier-card-divider"></span>
+          <p class="atelier-card-desc">Atención personalizada y asesoría antes y después de la compra.</p>
+          <a href="https://wa.me/51920688338" class="atelier-card-link">Saber más <span class="atelier-arrow">→</span></a>
+        </article>
       </div>
     </div>
   </section>
+
+  <style>
+    /* === Por Qué Elegir Section === */
+    .atelier-section {
+      position: relative;
+      padding: 100px 24px 90px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbf6f1 100%);
+      overflow: hidden;
+    }
+    /* Top hairline accent — matches footer */
+    .atelier-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #d4a574 50%, transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .atelier-noise { display: none; }
+    .atelier-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    /* Header */
+    .atelier-header { text-align: center; margin-bottom: 64px; }
+    .atelier-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .atelier-hairline {
+      display: block;
+      height: 1px;
+      width: 32px;
+      background: #d4a574;
+      opacity: 0.6;
+    }
+    .atelier-eyebrow-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #C83B15;
+    }
+    .atelier-title {
+      font-family: 'Jost', sans-serif;
+      font-size: clamp(28px, 4.4vw, 40px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin: 0 0 18px;
+    }
+    .atelier-title-accent { color: #C83B15; }
+    .atelier-subtitle {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #4a4a4a;
+      max-width: 580px;
+      margin: 0 auto 28px;
+    }
+    .atelier-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    .atelier-divider-line {
+      display: block;
+      height: 1px;
+      width: 56px;
+      background: linear-gradient(90deg, transparent, #d4a574);
+    }
+    .atelier-divider-line:last-child {
+      background: linear-gradient(90deg, #d4a574, transparent);
+    }
+    .atelier-divider-mark {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #C83B15;
+      box-shadow: 0 0 0 3px rgba(200,59,21,0.12);
+    }
+    /* Grid */
+    .atelier-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .atelier-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    }
+    @media (max-width: 640px) {
+      .atelier-grid { grid-template-columns: 1fr; gap: 18px; }
+      .atelier-section { padding: 72px 20px 64px; }
+    }
+    /* Cards */
+    .atelier-card {
+      position: relative;
+      background: #ffffff;
+      padding: 44px 28px 32px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 165, 116, 0.25);
+      box-shadow: 0 4px 20px -8px rgba(0,0,0,0.08);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    /* Top accent line that grows on hover */
+    .atelier-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C83B15 50%, transparent);
+      transition: width 0.5s ease;
+    }
+    .atelier-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 48px -16px rgba(200, 59, 21, 0.18);
+      border-color: rgba(212, 165, 116, 0.55);
+    }
+    .atelier-card:hover::before { width: 80%; }
+    .atelier-numeral {
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: #d4a574;
+      opacity: 0.85;
+      pointer-events: none;
+      transition: color 0.4s ease;
+      z-index: 1;
+    }
+    .atelier-card:hover .atelier-numeral { color: #C83B15; }
+    .atelier-icon {
+      position: relative;
+      z-index: 1;
+      margin-top: 28px;
+      margin-bottom: 22px;
+      align-self: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(200,59,21,0.06) 0%, rgba(212,165,116,0.10) 100%);
+      box-shadow: inset 0 0 0 1px rgba(212,165,116,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C83B15;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .atelier-card:hover .atelier-icon {
+      transform: scale(1.06);
+      box-shadow: inset 0 0 0 1px rgba(212,165,116,0.6), 0 8px 20px -6px rgba(200,59,21,0.25);
+    }
+    .atelier-icon svg { width: 32px; height: 32px; }
+    .atelier-card-title {
+      position: relative;
+      z-index: 1;
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin: 0 0 12px;
+      line-height: 1.3;
+      align-self: center;
+      text-align: center;
+      width: 100%;
+    }
+    .atelier-card-divider {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: #d4a574;
+      margin: 0 auto 14px;
+    }
+    .atelier-card-desc {
+      position: relative;
+      z-index: 1;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #4a4a4a;
+      margin: 0 0 22px;
+      text-align: center;
+      width: 100%;
+    }
+    .atelier-card-link {
+      position: relative;
+      z-index: 1;
+      margin: auto auto 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #C83B15;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .atelier-card-link:hover { color: #a03010; }
+    .atelier-arrow {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .atelier-card:hover .atelier-arrow { transform: translateX(5px); }
+  </style>
   
-  <!-- Footer (Premium) -->
-  <footer class="relative w-full pt-16 pb-8 px-4 overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #F7F1EC 100%);">
-    <div class="absolute top-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #C83B15 30%, #D4A574 50%, #C83B15 70%, transparent 100%);"></div>
+  <!-- Editorial Atelier Footer -->
+  <footer class="atelier-footer">
+    <div class="atelier-footer-noise"></div>
+    <!-- Top accent hairline -->
+    <div class="atelier-footer-top-line" aria-hidden="true"></div>
 
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10">
-        <!-- Brand -->
-        <div class="text-center md:text-left">
-          <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy Perú" class="h-16 w-auto mx-auto md:mx-0 mb-4 object-contain" width="180" height="56" loading="lazy" decoding="async">
-          <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">Criadores de Caniche/Poodle en Perú. Más de 10 años entregando cachorros con pedigree, vacunados y con garantía de salud.</p>
-        </div>
+    <div class="atelier-footer-container">
+      <div class="atelier-footer-grid">
+        <!-- Col 1: Brand -->
+        <section class="atelier-footer-brand">
+          <img src="/images/logo-puppy-toy.webp" alt="Puppy Toy Perú" class="atelier-footer-logo" width="180" height="56" loading="lazy" decoding="async">
+          <p class="atelier-footer-tagline">Criadores de Caniche/Poodle en Perú desde 2014.</p>
+          <p class="atelier-footer-desc">Más de 10 años entregando cachorros con pedigree, vacunados y con garantía de salud, criados con la calidez que merecen.</p>
+          <div class="atelier-footer-signature" aria-hidden="true">
+            <span class="atelier-footer-sig-line"></span>
+            <span class="atelier-footer-sig-mark"></span>
+            <span class="atelier-footer-sig-year">EST. 2014</span>
+          </div>
+        </section>
 
-        <!-- Navegación -->
-        <div class="text-center md:text-left">
-          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Navegación</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/" class="text-gray-600 hover:text-primary transition-colors text-sm">Inicio</a></li>
-            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Cachorros</a></li>
-            <li><a href="/familias.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Familias</a></li>
-            <li><a href="/informacion.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Información</a></li>
-            <li><a href="/visitanos.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Visítanos</a></li>
+        <!-- Col 2: Navegación -->
+        <nav class="atelier-footer-col" aria-label="Navegación principal">
+          <h3 class="atelier-footer-heading">Navegación</h3>
+          <ul class="atelier-footer-list">
+            <li><a href="/" class="atelier-footer-link">Inicio</a></li>
+            <li><a href="/cachorros.html" class="atelier-footer-link">Cachorros</a></li>
+            <li><a href="/familias.html" class="atelier-footer-link">Familias</a></li>
+            <li><a href="/informacion.html" class="atelier-footer-link">Información</a></li>
+            <li><a href="/visitanos.html" class="atelier-footer-link">Visítanos</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <!-- Categorías -->
-        <div class="text-center md:text-left">
-          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Categorías</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Mini Toy</a></li>
-            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Toy</a></li>
-            <li><a href="/cachorros.html" class="text-gray-600 hover:text-primary transition-colors text-sm">Enano</a></li>
+        <!-- Col 3: Categorías -->
+        <nav class="atelier-footer-col" aria-label="Categorías">
+          <h3 class="atelier-footer-heading">Categorías</h3>
+          <ul class="atelier-footer-list">
+            <li><a href="/cachorros.html" class="atelier-footer-link">Mini Toy</a></li>
+            <li><a href="/cachorros.html" class="atelier-footer-link">Toy</a></li>
+            <li><a href="/cachorros.html" class="atelier-footer-link">Enano</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <!-- Contacto -->
-        <div class="text-center md:text-left">
-          <h3 class="text-xs font-bold uppercase mb-4 text-primary" style="letter-spacing: 0.2em;">Contacto</h3>
-          <ul class="space-y-3">
+        <!-- Col 4: Contacto -->
+        <section class="atelier-footer-contact">
+          <h3 class="atelier-footer-heading">Contacto</h3>
+          <ul class="atelier-footer-contact-list">
             <li>
-              <a href="mailto:contacto@puppytoy.com" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
-                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              <a href="mailto:contacto@puppytoy.com" class="atelier-footer-contact-item">
+                <span class="atelier-footer-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="5" width="20" height="14" rx="1"/>
+                    <path d="M2 7l10 6 10-6"/>
+                  </svg>
                 </span>
-                <span class="break-all">contacto@puppytoy.com</span>
+                <span class="atelier-footer-contact-text">contacto@puppytoy.com</span>
               </a>
             </li>
             <li>
-              <a href="tel:+51920688338" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
-                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+51920688338" class="atelier-footer-contact-item">
+                <span class="atelier-footer-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
                 </span>
-                +51 920 688 338
+                <span class="atelier-footer-contact-text">+51 920 688 338</span>
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/puppytoyperu" target="_blank" rel="noopener" class="flex items-center justify-center md:justify-start gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm">
-                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <a href="https://instagram.com/puppytoyperu" target="_blank" rel="noopener" class="atelier-footer-contact-item">
+                <span class="atelier-footer-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+                  </svg>
                 </span>
-                @puppytoyperu
+                <span class="atelier-footer-contact-text">@puppytoyperu</span>
               </a>
             </li>
-            <li class="pt-1">
-              <div class="flex items-start justify-center md:justify-start gap-2.5 text-gray-600 text-sm">
-                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(200,59,21,0.08);">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <li>
+              <address class="atelier-footer-contact-item atelier-footer-address">
+                <span class="atelier-footer-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 0116 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
                 </span>
-                <span class="leading-snug">Lima, Perú<br><span class="text-gray-500 text-xs">Oficina Presencial · Los Olivos</span></span>
-              </div>
+                <span class="atelier-footer-contact-text">Lima, Perú · <em>Oficina presencial — Los Olivos</em></span>
+              </address>
             </li>
           </ul>
-        </div>
+          <a href="/visitanos.html" class="atelier-footer-cta">
+            <span>Agendar Visita</span>
+            <span class="atelier-arrow">→</span>
+          </a>
+        </section>
       </div>
 
-      <div class="h-px w-full" style="background: linear-gradient(90deg, transparent, #C83B15 25%, #D4A574 50%, #C83B15 75%, transparent);"></div>
-
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 mt-2">
-        <p class="text-gray-500 text-xs md:text-sm text-center md:text-left">© 2026 <span class="font-semibold text-gray-700">Puppy Toy Perú</span> — Todos los derechos reservados.</p>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-2 text-xs font-semibold uppercase text-gray-500 hover:text-primary transition-colors group" style="letter-spacing: 0.15em;">
-          <span class="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center group-hover:border-primary transition-colors">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-          </span>
-          Regresar arriba
-        </button>
+      <!-- Submarino -->
+      <div class="atelier-footer-submarino">
+        <span class="atelier-footer-submarino-line" aria-hidden="true"></span>
+        <div class="atelier-footer-submarino-row">
+          <span class="atelier-footer-copyright">© 2026 Puppy Toy Perú — Todos los derechos reservados.</span>
+          <button class="atelier-footer-totop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Regresar arriba">
+            <span>Regresar arriba</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </button>
+          <span class="atelier-footer-credit">Hecho en Lima · Criado con amor</span>
+        </div>
       </div>
     </div>
   </footer>
+
+  <style>
+    /* === Footer Editorial === */
+    .atelier-footer {
+      position: relative;
+      background: linear-gradient(180deg, #ffffff 0%, #fbf6f1 100%);
+      padding: 80px 24px 40px;
+      overflow: hidden;
+    }
+    .atelier-footer-noise { display: none; }
+    .atelier-footer-top-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, #C83B15 30%, #d4a574 50%, #C83B15 70%, transparent 100%);
+      z-index: 1;
+    }
+    .atelier-footer-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .atelier-footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 1024px) {
+      .atelier-footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 640px) {
+      .atelier-footer-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+      .atelier-footer { padding: 64px 20px 36px; }
+    }
+    /* Brand col */
+    .atelier-footer-brand { display: flex; flex-direction: column; }
+    .atelier-footer-logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 18px;
+      object-fit: contain;
+    }
+    @media (max-width: 640px) {
+      .atelier-footer-logo { margin-left: auto; margin-right: auto; }
+    }
+    .atelier-footer-tagline {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #1a1a1a;
+      margin: 0 0 12px;
+    }
+    .atelier-footer-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #5a5a5a;
+      margin: 0 0 24px;
+      max-width: 320px;
+    }
+    @media (max-width: 640px) { .atelier-footer-desc { margin-left: auto; margin-right: auto; } }
+    .atelier-footer-signature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+    @media (max-width: 640px) { .atelier-footer-signature { justify-content: center; } }
+    .atelier-footer-sig-line {
+      display: block;
+      height: 1px;
+      width: 36px;
+      background: #d4a574;
+    }
+    .atelier-footer-sig-mark {
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #C83B15;
+      box-shadow: 0 0 0 2px rgba(200,59,21,0.15);
+    }
+    .atelier-footer-sig-year {
+      font-family: 'Jost', sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      color: #C83B15;
+    }
+    /* Heading style (cols) */
+    .atelier-footer-heading {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #C83B15;
+      margin: 0 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(212, 165, 116, 0.4);
+    }
+    /* List */
+    .atelier-footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .atelier-footer-list li { margin-bottom: 12px; }
+    .atelier-footer-link {
+      position: relative;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+    .atelier-footer-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #C83B15;
+      transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .atelier-footer-link:hover { color: #C83B15; }
+    .atelier-footer-link:hover::after { width: 100%; }
+    @media (max-width: 640px) { .atelier-footer-link::after { display: none; } }
+    /* Contact */
+    .atelier-footer-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .atelier-footer-contact-list li {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(212, 165, 116, 0.22);
+    }
+    .atelier-footer-contact-list li:last-child { border-bottom: none; }
+    .atelier-footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 12px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-style: normal;
+      transition: color 0.3s ease;
+    }
+    @media (max-width: 640px) { .atelier-footer-contact-item { justify-content: center; } }
+    .atelier-footer-contact-item:hover { color: #C83B15; }
+    .atelier-footer-contact-item:hover .atelier-footer-icon { background: rgba(200,59,21,0.15); }
+    .atelier-footer-icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(200,59,21,0.08);
+      color: #C83B15;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    .atelier-footer-icon svg { width: 14px; height: 14px; }
+    .atelier-footer-contact-text { flex: 1; line-height: 1.45; padding-top: 6px; }
+    @media (max-width: 640px) { .atelier-footer-contact-text { flex: 0 1 auto; } }
+    .atelier-footer-address em {
+      font-style: normal;
+      color: #6a6a6a;
+      font-size: 12.5px;
+      display: block;
+      margin-top: 2px;
+    }
+    .atelier-footer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 22px;
+      border: 1.5px solid #C83B15;
+      border-radius: 999px;
+      background: transparent;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #C83B15;
+      text-decoration: none;
+      transition: background 0.4s ease, color 0.3s ease;
+    }
+    .atelier-footer-cta:hover {
+      background: #C83B15;
+      color: #ffffff;
+    }
+    .atelier-footer-cta .atelier-arrow {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .atelier-footer-cta:hover .atelier-arrow { transform: translateX(4px); }
+    /* Submarino */
+    .atelier-footer-submarino { position: relative; }
+    .atelier-footer-submarino-line {
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212, 165, 116, 0.5) 30%, rgba(212, 165, 116, 0.5) 70%, transparent 100%);
+      margin-bottom: 20px;
+    }
+    .atelier-footer-submarino-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .atelier-footer-submarino-row { justify-content: center; text-align: center; }
+    }
+    .atelier-footer-copyright,
+    .atelier-footer-credit {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: #6a6a6a;
+    }
+    .atelier-footer-totop {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: none;
+      padding: 6px 0;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #6a6a6a;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .atelier-footer-totop:hover { color: #C83B15; }
+    .atelier-footer-totop svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .atelier-footer-totop:hover svg { transform: translateY(-3px); }
+    .atelier-footer-monogram { display: none; }
+  </style>
   
   <!-- WhatsApp Float Button - Mario Style -->
   <a class="wa-float" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20quiero%20información%20sobre%20cachorros" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
