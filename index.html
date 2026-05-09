@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="/dist/styles.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Preconnect a CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -542,191 +542,6 @@
     .lite-vimeo iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%; border: 0; display: block; aspect-ratio: auto; }
     .lite-vimeo[data-loaded="true"] > .lite-vimeo-play { display: none; }
     .lite-vimeo[data-loaded="true"]::before { display: none; }
-
-    /* ===== Familias Felices Section ===== */
-    .ff-serif { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.01em; }
-    .ff-eyebrow { font-size: 12px; letter-spacing: 0.18em; }
-    .ff-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 32px;
-    }
-    @media (max-width: 1024px) {
-      .ff-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    }
-    @media (max-width: 640px) {
-      .ff-grid {
-        display: flex;
-        grid-template-columns: none;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 14px;
-        margin: 0 -16px;
-        padding: 4px 16px 12px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
-      .ff-grid::-webkit-scrollbar { display: none; }
-      .ff-grid > * { flex: 0 0 88%; scroll-snap-align: start; }
-    }
-    .ff-card {
-      position: relative;
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
-      cursor: pointer;
-      border: 0;
-      padding: 0;
-      text-align: left;
-      font: inherit;
-      color: inherit;
-    }
-    .ff-card:hover, .ff-card:focus-visible {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-      outline: none;
-    }
-    .ff-card:focus-visible { box-shadow: 0 12px 32px rgba(0,0,0,0.12), 0 0 0 3px rgba(225,75,30,0.4); }
-    .ff-card__img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .ff-card:hover .ff-card__img { transform: scale(1.03); }
-    .ff-card__badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 11px 5px 8px;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 600;
-      color: #1A1A1A;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      z-index: 2;
-    }
-    .ff-card__badge svg { color: #E14B1E; flex-shrink: 0; }
-    .ff-card__overlay {
-      position: absolute;
-      inset: auto 0 0 0;
-      padding: 18px 16px 16px;
-      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 55%, transparent 100%);
-      color: #fff;
-      z-index: 2;
-    }
-    .ff-card__quote {
-      font-size: 14px;
-      line-height: 1.4;
-      margin: 0 0 8px;
-      font-weight: 400;
-    }
-    .ff-card__stars {
-      display: inline-flex;
-      gap: 2px;
-      color: #F5B400;
-      margin-bottom: 4px;
-    }
-    .ff-card__family {
-      font-size: 13px;
-      font-weight: 600;
-      margin: 0;
-      line-height: 1.3;
-    }
-    .ff-card__meta {
-      font-size: 11px;
-      color: rgba(255,255,255,0.78);
-      margin: 2px 0 0;
-      letter-spacing: 0.02em;
-    }
-    .ff-stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      font-weight: 600;
-      line-height: 1;
-      color: #1A1A1A;
-    }
-    @media (min-width: 768px) { .ff-stat-num { font-size: 44px; } }
-    .ff-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: #E14B1E;
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .ff-btn-primary:hover { background: #B73A14; transform: translateY(-1px); }
-    .ff-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 26px;
-      background: transparent;
-      color: #1A1A1A;
-      font-weight: 600;
-      font-size: 15px;
-      border: 1.5px solid #E8E4DE;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .ff-btn-secondary:hover { border-color: #1A1A1A; }
-
-    /* Modal */
-    .ff-modal { position: fixed; inset: 0; z-index: 100; display: none; }
-    .ff-modal[aria-hidden="false"] { display: block; }
-    .ff-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.72); animation: ffFade 0.25s ease; }
-    .ff-modal__panel {
-      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-      padding: 16px; pointer-events: none;
-    }
-    .ff-modal__inner {
-      pointer-events: auto;
-      background: #fff;
-      border-radius: 20px;
-      max-width: 560px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
-      animation: ffPop 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .ff-modal__close {
-      position: absolute; top: 12px; right: 12px; z-index: 3;
-      width: 36px; height: 36px;
-      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
-      border: 0; border-radius: 50%; cursor: pointer;
-      display: inline-flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .ff-modal__img-wrap { position: relative; width: 100%; aspect-ratio: 4/3; background: #f3f0eb; }
-    .ff-modal__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .ff-modal__body { padding: 24px 24px 28px; }
-    @media (min-width: 768px) { .ff-modal__body { padding: 28px 32px 32px; } }
-    @keyframes ffFade { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes ffPop { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
-    @media (prefers-reduced-motion: reduce) {
-      .ff-card, .ff-card__img, .ff-btn-primary, .ff-btn-secondary { transition: none !important; }
-      .ff-modal__backdrop, .ff-modal__inner { animation: none !important; }
-    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -1046,161 +861,72 @@
     </div>
   </section>
   
-  <!-- ====== FAMILIAS FELICES (Prueba social premium) ====== -->
-  <!-- TODO: reemplazar fotos con imagenes reales de cachorros entregados (cada testimonio en /images/familias/) -->
-  <!-- TODO: cuando exista CMS o backend, mover los datos a JSON y renderizar con fetch -->
-  <section class="w-full py-16 md:py-24 px-4 bg-[#F7F5F2]" aria-labelledby="ff-title">
+  <!-- Video Carousel Section -->
+  <section class="w-full bg-[#F8F8F8] border-b-4 border-black py-12 md:py-16 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Header -->
-      <div class="text-center mb-10 md:mb-14">
-        <p class="ff-eyebrow font-semibold uppercase text-primary mb-4">Historias reales</p>
-        <h2 id="ff-title" class="ff-serif text-[40px] sm:text-5xl md:text-[56px] font-medium text-[#1A1A1A] leading-[1.05] mb-5">
-          Familias felices, cachorros en casa
-        </h2>
-        <p class="text-base md:text-lg text-[#6B6B6B] max-w-xl mx-auto">
-          Más de 500 familias peruanas ya viven con su nuevo mejor amigo.
-        </p>
-
-        <!-- Stats row -->
-        <div class="flex flex-wrap items-start justify-center gap-x-10 gap-y-6 md:gap-x-20 mt-10 pt-8 border-t border-[#E8E4DE] max-w-3xl mx-auto">
-          <div class="text-center">
-            <div class="ff-stat-num">+500</div>
-            <div class="text-[11px] md:text-xs text-[#6B6B6B] uppercase tracking-[0.14em] mt-2">Familias felices</div>
+      <h2 class="text-2xl md:text-3xl font-bold text-center uppercase mb-10">CANICHES EN SU NUEVO HOGAR</h2>
+      
+      <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4" id="video-carousel">
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <video class="absolute inset-0 w-full h-full" autoplay muted loop playsinline preload="metadata" poster="/images/cachorro-1-poster.jpg" aria-label="Cachorro Poodle Puppy Toy Peru en su nuevo hogar" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <source src="/videos/cachorro-1.mp4" type="video/mp4">
+            </video>
+            <!-- Watermark cover -->
+            <div aria-hidden="true" style="position: absolute; bottom: 4px; right: 4px; width: 52px; height: 52px; border-radius: 50%; background: #C83B15; box-shadow: 0 4px 12px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; z-index: 2;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                <circle cx="6" cy="9" r="2"/>
+                <circle cx="10" cy="6" r="2"/>
+                <circle cx="14" cy="6" r="2"/>
+                <circle cx="18" cy="9" r="2"/>
+                <path d="M12 11c-3 0-6 2-6 5 0 2 2 3 4 3 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 4-1 4-3 0-3-3-5-6-5z"/>
+              </svg>
+            </div>
           </div>
-          <div class="text-center">
-            <div class="ff-stat-num">4.9<span class="text-[#F5B400]">★</span></div>
-            <div class="text-[11px] md:text-xs text-[#6B6B6B] uppercase tracking-[0.14em] mt-2">Calificación promedio</div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover" aria-label="Cachorro Caniche en Los Olivos - Puppy Toy Perú">
+              <source src="/videos/los-olivos-cachorro.mp4" type="video/mp4">
+            </video>
+            <!-- Watermark cover -->
+            <div aria-hidden="true" style="position: absolute; bottom: 4px; right: 4px; width: 52px; height: 52px; border-radius: 50%; background: #C83B15; box-shadow: 0 4px 12px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; z-index: 2;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                <circle cx="6" cy="9" r="2"/>
+                <circle cx="10" cy="6" r="2"/>
+                <circle cx="14" cy="6" r="2"/>
+                <circle cx="18" cy="9" r="2"/>
+                <path d="M12 11c-3 0-6 2-6 5 0 2 2 3 4 3 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 4-1 4-3 0-3-3-5-6-5z"/>
+              </svg>
+            </div>
           </div>
-          <div class="text-center">
-            <div class="ff-stat-num">24</div>
-            <div class="text-[11px] md:text-xs text-[#6B6B6B] uppercase tracking-[0.14em] mt-2">Regiones del Perú</div>
+        </div>
+        <div class="video-card bg-white border-4 border-primary rounded-2xl overflow-hidden flex-shrink-0">
+          <div class="relative bg-black" style="padding-top: 177.78%;">
+            <video class="absolute inset-0 w-full h-full" autoplay muted loop playsinline preload="metadata" poster="/images/cachorro-3-poster.jpg" aria-label="Cachorro Poodle Puppy Toy Peru en su nuevo hogar" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <source src="/videos/cachorro-3.mp4" type="video/mp4">
+            </video>
+            <!-- Watermark cover -->
+            <div aria-hidden="true" style="position: absolute; bottom: 4px; right: 4px; width: 52px; height: 52px; border-radius: 50%; background: #C83B15; box-shadow: 0 4px 12px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; z-index: 2;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                <circle cx="6" cy="9" r="2"/>
+                <circle cx="10" cy="6" r="2"/>
+                <circle cx="14" cy="6" r="2"/>
+                <circle cx="18" cy="9" r="2"/>
+                <path d="M12 11c-3 0-6 2-6 5 0 2 2 3 4 3 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 4-1 4-3 0-3-3-5-6-5z"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Testimonials grid (mobile carousel via scroll-snap) -->
-      <div class="ff-grid" id="ff-grid" role="list" aria-label="Testimonios de familias">
-        <!-- Card 1 -->
-        <button class="ff-card" type="button" data-ff-id="0" aria-label="Ver historia de Luna - Familia Quispe en Lima">
-          <img class="ff-card__img" src="/images/poodle-toy-marron-chocolate-new.png" alt="Luna, Caniche Toy marrón chocolate en su nuevo hogar con la Familia Quispe en Lima" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Luna cambió nuestra casa por completo. Llegó sana, feliz y muy sociable.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Quispe · Lima</p>
-            <p class="ff-card__meta">Caniche Toy · Marzo 2026</p>
-          </div>
-        </button>
-        <!-- Card 2 -->
-        <button class="ff-card" type="button" data-ff-id="1" aria-label="Ver historia de Max - Familia Rojas en Arequipa">
-          <img class="ff-card__img" src="/images/poodle-toy-negro-new.png" alt="Max, Caniche Toy negro con la Familia Rojas en Arequipa" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Es el regalo más bonito que le hicimos a nuestros hijos. Todo el proceso fue impecable.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Rojas · Arequipa</p>
-            <p class="ff-card__meta">Caniche Toy · Febrero 2026</p>
-          </div>
-        </button>
-        <!-- Card 3 -->
-        <button class="ff-card" type="button" data-ff-id="2" aria-label="Ver historia de Coco - Familia Mendoza en Cusco">
-          <img class="ff-card__img" src="/images/poodle-toy-beige-new.png" alt="Coco, Caniche Toy beige con la Familia Mendoza en Cusco" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Llegó perfectamente desde Lima. Súper saludable y con todos sus papeles al día.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Mendoza · Cusco</p>
-            <p class="ff-card__meta">Caniche Toy · Enero 2026</p>
-          </div>
-        </button>
-        <!-- Card 4 -->
-        <button class="ff-card" type="button" data-ff-id="3" aria-label="Ver historia de Bruno - Familia Vargas en Trujillo">
-          <img class="ff-card__img" src="/images/poodle-mini-toy-negro-new.png" alt="Bruno, Caniche Mini Toy negro con la Familia Vargas en Trujillo" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Atención de primera. Bruno es el alma de la casa, todos lo aman.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Vargas · Trujillo</p>
-            <p class="ff-card__meta">Caniche Mini Toy · Diciembre 2025</p>
-          </div>
-        </button>
-        <!-- Card 5 -->
-        <button class="ff-card" type="button" data-ff-id="4" aria-label="Ver historia de Mía - Familia Torres en Piura">
-          <img class="ff-card__img" src="/images/poodle-mini-toy-rojo-new.png" alt="Mía, Caniche Mini Toy rojo con la Familia Torres en Piura" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Pequeñita y juguetona. Llegó con su kit de bienvenida y guía de cuidados.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Torres · Piura</p>
-            <p class="ff-card__meta">Caniche Mini Toy · Diciembre 2025</p>
-          </div>
-        </button>
-        <!-- Card 6 -->
-        <button class="ff-card" type="button" data-ff-id="5" aria-label="Ver historia de Rocky - Familia Castro en Chiclayo">
-          <img class="ff-card__img" src="/images/poodle-toy-rojo-new.png" alt="Rocky, Caniche Toy rojo con la Familia Castro en Chiclayo" loading="lazy" decoding="async">
-          <span class="ff-card__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Familia verificada</span>
-          <div class="ff-card__overlay">
-            <p class="ff-card__quote">“Excelente experiencia. Rocky es muy inteligente y está perfectamente socializado.”</p>
-            <div class="ff-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <p class="ff-card__family">Familia Castro · Chiclayo</p>
-            <p class="ff-card__meta">Caniche Toy · Noviembre 2025</p>
-          </div>
-        </button>
-      </div>
-
-      <!-- Ver más -->
-      <div class="text-center mt-10">
-        <a href="/familias.html" class="text-primary font-semibold text-sm md:text-base hover:underline inline-flex items-center gap-1.5">
-          Ver más historias
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <!-- CTA final -->
-      <div class="mt-14 md:mt-20 pt-12 md:pt-16 border-t border-[#E8E4DE] text-center">
-        <h3 class="ff-serif text-2xl md:text-3xl font-medium text-[#1A1A1A] mb-7">
-          ¿Quieres ser la próxima familia feliz?
-        </h3>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <a class="ff-btn-primary" href="/cachorros.html">
-            Ver cachorros disponibles
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a class="ff-btn-secondary" href="https://wa.me/51920688338?text=Hola%20Puppy%20Toy%2C%20vi%20los%20testimonios%20y%20quiero%20m%C3%A1s%20info" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.625-1.476A11.929 11.929 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.198 0-4.247-.588-6.02-1.614l-.432-.256-2.742.876.87-2.675-.28-.446A9.706 9.706 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
-            Hablar por WhatsApp
-          </a>
-        </div>
+      <div class="flex justify-center gap-2 mt-6">
+        <button class="w-3 h-3 rounded-full bg-primary"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
+        <button class="w-3 h-3 rounded-full bg-primary/30"></button>
       </div>
     </div>
   </section>
-
-  <!-- ====== Modal de testimonio ====== -->
-  <div class="ff-modal" id="ff-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ff-modal-name">
-    <div class="ff-modal__backdrop" data-ff-close></div>
-    <div class="ff-modal__panel">
-      <div class="ff-modal__inner" role="document">
-        <button type="button" class="ff-modal__close" data-ff-close aria-label="Cerrar">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="ff-modal__img-wrap">
-          <img class="ff-modal__img" id="ff-modal-img" src="" alt="" loading="lazy" decoding="async">
-        </div>
-        <div class="ff-modal__body">
-          <div class="ff-card__stars" id="ff-modal-stars" style="margin-bottom: 12px; font-size: 18px;" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="ff-serif text-xl md:text-2xl text-[#1A1A1A] leading-[1.4] mb-6" id="ff-modal-quote" style="font-weight: 500;"></p>
-          <div class="border-t border-[#E8E4DE] pt-5 mb-6">
-            <div class="font-semibold text-[#1A1A1A]" id="ff-modal-name"></div>
-            <div class="text-sm text-[#6B6B6B] mt-1" id="ff-modal-meta"></div>
-          </div>
-          <a class="ff-btn-primary" id="ff-modal-cta" href="/cachorros.html">
-            <span id="ff-modal-cta-text">Quiero un cachorro</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
   
   <!-- Certificados Section -->
   <section class="w-full py-12 md:py-16 px-4">
@@ -2207,77 +1933,6 @@
         if (io) io.observe(el); else load(el);
         el.addEventListener('click', () => load(el), { once: true });
         el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(el); } });
-      });
-    })();
-
-    /* ===== Modal Familias Felices ===== */
-    (function () {
-      // Datos de testimonios. TODO: reemplazar con feed real.
-      const data = [
-        { name: 'Luna', family: 'Familia Quispe', city: 'Lima', breed: 'Caniche Toy', color: 'Marrón chocolate', date: 'Marzo 2026', stars: 5, img: '/images/poodle-toy-marron-chocolate-new.png', quote: 'Luna cambió nuestra casa por completo. Llegó sana, feliz y muy sociable. Cada mañana es una alegría tenerla con nosotros.' },
-        { name: 'Max', family: 'Familia Rojas', city: 'Arequipa', breed: 'Caniche Toy', color: 'Negro', date: 'Febrero 2026', stars: 5, img: '/images/poodle-toy-negro-new.png', quote: 'Es el regalo más bonito que le hicimos a nuestros hijos. Todo el proceso fue impecable, desde la asesoría hasta la entrega.' },
-        { name: 'Coco', family: 'Familia Mendoza', city: 'Cusco', breed: 'Caniche Toy', color: 'Beige', date: 'Enero 2026', stars: 5, img: '/images/poodle-toy-beige-new.png', quote: 'Llegó perfectamente desde Lima. Súper saludable, con todos sus papeles al día y sus vacunas en orden.' },
-        { name: 'Bruno', family: 'Familia Vargas', city: 'Trujillo', breed: 'Caniche Mini Toy', color: 'Negro', date: 'Diciembre 2025', stars: 5, img: '/images/poodle-mini-toy-negro-new.png', quote: 'Atención de primera. Bruno es el alma de la casa, todos lo aman. Recomendamos a Puppy Toy 100%.' },
-        { name: 'Mía', family: 'Familia Torres', city: 'Piura', breed: 'Caniche Mini Toy', color: 'Rojo', date: 'Diciembre 2025', stars: 5, img: '/images/poodle-mini-toy-rojo-new.png', quote: 'Pequeñita y juguetona. Llegó con su kit de bienvenida y guía de cuidados. La asesoría veterinaria 24/7 nos dio mucha tranquilidad.' },
-        { name: 'Rocky', family: 'Familia Castro', city: 'Chiclayo', breed: 'Caniche Toy', color: 'Rojo', date: 'Noviembre 2025', stars: 5, img: '/images/poodle-toy-rojo-new.png', quote: 'Excelente experiencia. Rocky es muy inteligente y está perfectamente socializado. Ya es parte de la familia.' }
-      ];
-
-      const modal = document.getElementById('ff-modal');
-      const modalImg = document.getElementById('ff-modal-img');
-      const modalQuote = document.getElementById('ff-modal-quote');
-      const modalName = document.getElementById('ff-modal-name');
-      const modalMeta = document.getElementById('ff-modal-meta');
-      const modalCtaText = document.getElementById('ff-modal-cta-text');
-      const modalCta = document.getElementById('ff-modal-cta');
-
-      let lastFocused = null;
-
-      function open(idx) {
-        const t = data[idx];
-        if (!t) return;
-        modalImg.src = t.img;
-        modalImg.alt = t.name + ' con la ' + t.family + ' en ' + t.city;
-        modalQuote.textContent = '“' + t.quote + '”';
-        modalName.textContent = t.family + ' · ' + t.city;
-        modalMeta.textContent = t.breed + ' ' + t.color + ' · ' + t.date;
-        modalCtaText.textContent = 'Quiero un cachorro como ' + t.name;
-        modalCta.href = '/cachorros.html?ref=testimonio-' + encodeURIComponent(t.name.toLowerCase());
-
-        lastFocused = document.activeElement;
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        document.addEventListener('keydown', onKey);
-        // focus the close button (first interactive)
-        setTimeout(() => modal.querySelector('.ff-modal__close').focus(), 30);
-      }
-
-      function close() {
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        document.removeEventListener('keydown', onKey);
-        lastFocused && lastFocused.focus();
-      }
-
-      function onKey(e) {
-        if (e.key === 'Escape') { e.preventDefault(); close(); return; }
-        if (e.key === 'Tab') {
-          const focusables = modal.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-          if (!focusables.length) return;
-          const first = focusables[0], last = focusables[focusables.length - 1];
-          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-        }
-      }
-
-      // Wire each card
-      document.querySelectorAll('.ff-card').forEach(card => {
-        card.addEventListener('click', () => open(parseInt(card.dataset.ffId, 10)));
-        card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(parseInt(card.dataset.ffId, 10)); } });
-      });
-
-      // Wire close triggers
-      modal.querySelectorAll('[data-ff-close]').forEach(el => {
-        el.addEventListener('click', close);
       });
     })();
 
